@@ -239,7 +239,4 @@ This project uses a dual-license structure:
 
 ---
 
-
----
-
 *Built as an educational resource to make the history and mechanics of AI accessible to everyone.*
