@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Section IV — The Golden Age of Statistical Learning · How AI Works</title>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Sección IV — La edad de oro del aprendizaje estadístico · How AI Works</title>
 <link rel="stylesheet" href="styles.css">
 </head><body>
 <div class="progress-bar" style="background:linear-gradient(90deg,var(--a2),var(--a6))"></div>
 <button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <nav class="topnav"><a href="index.html" class="logo">How AI Works</a><div class="nav-links"><a href="section1.html">I</a><a href="section2.html">II</a><a href="section3.html">III</a><a href="section4.html" class="active">IV</a><a href="section5.html">V</a><a href="section6.html">VI</a><a href="section7.html">VII</a><a href="section8.html">VIII</a></div></nav>
-<div class="section-hero"><div class="era-label" style="color:var(--a2)">Section IV · 1990s–2001</div>
-<h1>The Golden Age of Statistical Learning</h1><p>SVM, LSTM, Random Forest — the classics that powered ML before deep learning took over.</p>
-<div class="nav-arrows"><a href="section3.html">&larr; Section III</a><a href="section5.html">Section V &rarr;</a></div></div>
+<div class="section-hero"><div class="era-label" style="color:var(--a2)">Sección IV · 1990s–2001</div>
+<h1>La edad de oro del aprendizaje estadístico</h1><p>SVM, LSTM, Random Forest — los clásicos que impulsaron el ML antes de que el deep learning tomara el relevo.</p>
+<div class="nav-arrows"><a href="section3.html">&larr; Sección III</a><a href="section5.html">Sección V &rarr;</a></div></div>
 <div class="models-container">
 
 <!-- ======= CNN / LeNet ======= -->
 <div class="model-card" id="model-cnn"><div class="mc-head"><span class="mc-year" style="color:var(--a2)">1998</span><div class="mc-info">
 <h3>CNN / LeNet <a href="http://yann.lecun.com/exdb/lenet/" target="_blank" class="paper-link">Paper</a></h3>
-<p>LeCun's convolutional neural network for handwritten digit recognition. Convolution filters slide over the image to extract features, then pooling shrinks them.</p>
-<div class="model-lineage">Adds <a href="section3.html#model-backprop">Backpropagation</a> training to <a href="section3.html#model-neocognitron">Neocognitron</a>'s hierarchical design; directly leads to <a href="section6.html#model-alexnet">AlexNet</a> and <a href="section6.html#model-resnet">ResNet</a>.</div>
+<p>La red neuronal convolucional de LeCun para reconocer dígitos manuscritos. Los filtros convolucionales se deslizan sobre la imagen para extraer rasgos y luego el *pooling* reduce los mapas.</p>
+<div class="model-lineage">Añade entrenamiento por <a href="section3.html#model-backprop">retropropagación</a> al diseño jerárquico del <a href="section3.html#model-neocognitron">Neocognitrón</a>; conduce directamente a <a href="section6.html#model-alexnet">AlexNet</a> y <a href="section6.html#model-resnet">ResNet</a>.</div>
 </div></div>
-<div class="mc-formula" style="color:var(--a2)">Input → [Conv → ReLU → Pool] × N → Flatten → Dense → Output class</div>
+<div class="mc-formula" style="color:var(--a2)">Entrada → [Conv → ReLU → Pool] × N → Aplanar → Densa → Clase de salida</div>
 <div class="mc-demo" id="demo-cnn"></div></div>
 
 <!-- ======= LSTM ======= -->
 <div class="model-card" id="model-lstm"><div class="mc-head"><span class="mc-year" style="color:var(--a2)">1997</span><div class="mc-info">
 <h3>LSTM (Long Short-Term Memory) <a href="https://doi.org/10.1162/neco.1997.9.8.1735" target="_blank" class="paper-link">Paper</a></h3>
-<p>Hochreiter & Schmidhuber's solution to vanishing gradients. Three gates (forget, input, output) control what to remember, add, and output from the cell state.</p>
-<div class="model-lineage">Solves <a href="section3.html#model-rnn">RNN</a>'s vanishing gradient problem with gated memory; enables <a href="section6.html#model-seq2seq">Seq2Seq</a> translation and <a href="section7.html#model-elmo">ELMo</a> embeddings.</div>
+<p>La solución de Hochreiter y Schmidhuber al gradiente evanescente. Tres compuertas (olvido, entrada y salida) controlan qué recordar, qué incorporar y qué emitir a partir del estado de celda.</p>
+<div class="model-lineage">Resuelve el problema de gradiente evanescente de las <a href="section3.html#model-rnn">RNN</a> con memoria con compuertas; habilita la traducción <a href="section6.html#model-seq2seq">Seq2Seq</a> y embeddings como <a href="section7.html#model-elmo">ELMo</a>.</div>
 </div></div>
 <div class="mc-formula" style="color:var(--a2)">fₜ = σ(forget) &nbsp; iₜ = σ(input) &nbsp; oₜ = σ(output) &nbsp; cₜ = fₜ⊙cₜ₋₁ + iₜ⊙tanh(…)</div>
 <div class="mc-demo" id="demo-lstm"></div></div>
@@ -32,41 +32,41 @@
 <!-- ======= SVM ======= -->
 <div class="model-card" id="model-svm"><div class="mc-head"><span class="mc-year" style="color:var(--a2)">1995</span><div class="mc-info">
 <h3>SVM (Support Vector Machine) <a href="https://doi.org/10.1007/BF00994018" target="_blank" class="paper-link">Paper</a></h3>
-<p>Vapnik's maximum-margin classifier — find the hyperplane that separates classes with the widest possible margin. Support vectors define the boundary.</p>
-<div class="model-lineage">Extends <a href="section2.html#model-knn">k-NN</a>'s distance-based idea with kernel tricks for non-linear boundaries; dominated ML before <a href="section6.html#model-alexnet">AlexNet</a> proved deep learning superior.</div>
+<p>El clasificador de máximo margen de Vapnik — encuentra el hiperplano que separa las clases con el mayor margen posible. Los vectores soporte definen la frontera.</p>
+<div class="model-lineage">Extiende la idea basada en distancias de <a href="section2.html#model-knn">k-NN</a> con el truco del kernel para fronteras no lineales; dominó el ML antes de que <a href="section6.html#model-alexnet">AlexNet</a> demostrara la superioridad del deep learning.</div>
 </div></div>
-<div class="mc-formula" style="color:var(--a2)">maximize margin = 2/||w|| &nbsp; subject to yᵢ(w·xᵢ + b) ≥ 1</div>
+<div class="mc-formula" style="color:var(--a2)">maximizar margen = 2/||w|| &nbsp; sujeto a yᵢ(w·xᵢ + b) ≥ 1</div>
 <div class="mc-demo" id="demo-svm"></div></div>
 
 <!-- ======= GMM + EM ======= -->
 <div class="model-card" id="model-gmm"><div class="mc-head"><span class="mc-year" style="color:var(--a2)">1977</span><div class="mc-info">
 <h3>GMM + EM Algorithm <a href="https://doi.org/10.1111/j.2517-6161.1977.tb01600.x" target="_blank" class="paper-link">Paper</a></h3>
-<p>Fit a mixture of Gaussians to data using Expectation-Maximization. E-step: soft cluster assignment. M-step: update parameters. Iterate until convergence.</p>
-<div class="model-lineage">Applies <a href="section1.html#model-bayes">Bayes' Theorem</a> to unsupervised clustering with latent variables; EM's iterative approach later inspires <a href="section6.html#model-vae">VAE</a>'s variational inference.</div>
+<p>Ajusta una mezcla de gaussianas a los datos con Expectation-Maximization (EM). Paso E: asignación suave a clústeres. Paso M: actualización de parámetros. Itera hasta converger.</p>
+<div class="model-lineage">Aplica el <a href="section1.html#model-bayes">teorema de Bayes</a> al *clustering* no supervisado con variables latentes; el enfoque iterativo de EM inspira más tarde la inferencia variacional de los <a href="section6.html#model-vae">VAE</a>.</div>
 </div></div>
-<div class="mc-formula" style="color:var(--a2)">E: P(k|xᵢ) = πₖN(xᵢ|μₖ,σₖ) / Σⱼ πⱼN(xᵢ|μⱼ,σⱼ) &nbsp; M: update μ,σ,π</div>
+<div class="mc-formula" style="color:var(--a2)">E: P(k|xᵢ) = πₖN(xᵢ|μₖ,σₖ) / Σⱼ πⱼN(xᵢ|μⱼ,σⱼ) &nbsp; M: actualizar μ,σ,π</div>
 <div class="mc-demo" id="demo-gmm"></div></div>
 
 <!-- ======= RANDOM FOREST ======= -->
 <div class="model-card" id="model-randomforest"><div class="mc-head"><span class="mc-year" style="color:var(--a2)">2001</span><div class="mc-info">
 <h3>Random Forest <a href="https://doi.org/10.1023/A:1010933404324" target="_blank" class="paper-link">Paper</a></h3>
-<p>Breiman's ensemble of decision trees — each tree trained on a random subset of data and features. Final prediction by majority vote.</p>
-<div class="model-lineage">Ensembles many <a href="section3.html#model-dtree">Decision Trees</a> via bagging to reduce overfitting; the ensemble idea is refined by <a href="section5.html#model-gbdt">GBDT</a> and <a href="section7.html#model-xgboost">XGBoost</a> using boosting instead.</div>
+<p>El ensamblado de árboles de decisión de Breiman — cada árbol se entrena con un subconjunto aleatorio de datos y características. La predicción final se obtiene por voto mayoritario.</p>
+<div class="model-lineage">Ensamblado de muchos <a href="section3.html#model-dtree">árboles de decisión</a> mediante *bagging* para reducir sobreajuste; la idea de ensamblados se refina con <a href="section5.html#model-gbdt">GBDT</a> y <a href="section7.html#model-xgboost">XGBoost</a> usando *boosting* (secuencial) en su lugar.</div>
 </div></div>
-<div class="mc-formula" style="color:var(--a2)">prediction = mode(tree₁(x), tree₂(x), ..., treeₙ(x)) — majority vote of random trees</div>
+<div class="mc-formula" style="color:var(--a2)">predicción = moda(árbol₁(x), árbol₂(x), ..., árbolₙ(x)) — voto mayoritario de árboles aleatorios</div>
 <div class="mc-demo" id="demo-rf"></div></div>
 
 <!-- ======= ADABOOST ======= -->
 <div class="model-card" id="model-adaboost"><div class="mc-head"><span class="mc-year" style="color:var(--a2)">1997</span><div class="mc-info">
 <h3>AdaBoost <a href="https://doi.org/10.1006/jcss.1997.1504" target="_blank" class="paper-link">Paper</a></h3>
-<p>Freund & Schapire's adaptive boosting — train weak classifiers sequentially, each focusing on mistakes of previous ones by upweighting misclassified samples.</p>
-<div class="model-lineage">Introduces sequential boosting of <a href="section3.html#model-dtree">Decision Tree</a> stumps; directly inspires <a href="section5.html#model-gbdt">GBDT</a> (gradient-based boosting) and <a href="section7.html#model-xgboost">XGBoost</a>.</div>
+<p>El *boosting* adaptativo de Freund y Schapire — entrena clasificadores débiles de forma secuencial, y cada uno se centra en los errores de los anteriores aumentando el peso de las muestras mal clasificadas.</p>
+<div class="model-lineage">Introduce el *boosting* secuencial de *stumps* (árboles muy simples) de <a href="section3.html#model-dtree">árboles de decisión</a>; inspira directamente <a href="section5.html#model-gbdt">GBDT</a> (boosting basado en gradiente) y <a href="section7.html#model-xgboost">XGBoost</a>.</div>
 </div></div>
-<div class="mc-formula" style="color:var(--a2)">H(x) = sign(Σ αₜhₜ(x)) &nbsp; where αₜ = ½ ln((1-εₜ)/εₜ) — weight by accuracy</div>
+<div class="mc-formula" style="color:var(--a2)">H(x) = sign(Σ αₜhₜ(x)) &nbsp; donde αₜ = ½ ln((1-εₜ)/εₜ) — pondera según precisión</div>
 <div class="mc-demo" id="demo-ada"></div></div>
 
 </div>
-<footer><a href="section3.html">&larr; Section III</a> &middot; <a href="section5.html">Section V: Eve of Deep Learning &rarr;</a></footer>
+<footer><a href="section3.html">&larr; Sección III</a> &middot; <a href="section5.html">Sección V: Víspera del deep learning &rarr;</a></footer>
 <script src="shared.js"></script>
 
 <script>
@@ -115,7 +115,7 @@
 // ============================================================
 (function(){
 const el=$('demo-cnn'),[c,ctx]=createCanvas(el,750,340);
-addHint(el,'Draw a digit (0-9) on the 28\u00d728 canvas. Watch convolution filters detect edges, pooling shrinks maps, then see classification scores.');
+addHint(el,'Dibuja un dígito (0-9) en el canvas de 28×28. Observa cómo los filtros convolucionales detectan bordes, el pooling reduce los mapas y finalmente aparecen las puntuaciones de clasificación.');
 
 const G=28, CS=7;
 let grid=Array.from({length:G},()=>new Float32Array(G));
@@ -123,8 +123,8 @@ let drawing=false, lastPt=null;
 let scanRow=-1, animId=null;
 
 const filters=[
-  {n:'Horiz. Edge',k:[[1,1,1],[0,0,0],[-1,-1,-1]],c:'#ff6b6b'},
-  {n:'Vert. Edge', k:[[1,0,-1],[1,0,-1],[1,0,-1]], c:'#38bdf8'},
+  {n:'Borde horiz.',k:[[1,1,1],[0,0,0],[-1,-1,-1]],c:'#ff6b6b'},
+  {n:'Borde vert.', k:[[1,0,-1],[1,0,-1],[1,0,-1]], c:'#38bdf8'},
   {n:'Diagonal',   k:[[0,-1,1],[1,0,-1],[-1,1,0]], c:'#a78bfa'}
 ];
 
@@ -291,7 +291,7 @@ function render(){
   const res=classify();
 
   // 1. Input Canvas
-  ctx.fillStyle='#4ecdc4';ctx.font='700 11px Fira Code';ctx.fillText('1. Input  28\u00d728',OX,OY-8);
+  ctx.fillStyle='#4ecdc4';ctx.font='700 11px Fira Code';ctx.fillText('1. Entrada  28×28',OX,OY-8);
   ctx.fillStyle='#08081a';ctx.beginPath();ctx.roundRect(OX-1,OY-1,G*CS+2,G*CS+2,4);ctx.fill();
   for(let r=0;r<G;r++) for(let c2=0;c2<G;c2++){
     if(grid[r][c2]>.01){
@@ -310,7 +310,7 @@ function render(){
 
   // 2. Conv Feature Maps
   const fmX=222,fmY=OY;
-  ctx.fillStyle='#ffd166';ctx.font='700 11px Fira Code';ctx.fillText('2. Convolution (3\u00d73)',fmX,fmY-8);
+  ctx.fillStyle='#ffd166';ctx.font='700 11px Fira Code';ctx.fillText('2. Convolución (3×3)',fmX,fmY-8);
   const fmaps=res.fmaps||filters.map(f=>conv2d(grid,f.k));
   fmaps.forEach((fm,fi)=>{
     const fy=fmY+fi*70,fcs=2.6,col=filters[fi].c;
@@ -336,7 +336,7 @@ function render(){
 
   // 3. Pooled Maps
   const pX=392,pY=OY;
-  ctx.fillStyle='#ffd166';ctx.font='700 11px Fira Code';ctx.fillText('3. Max Pool 2\u00d72',pX,pY-8);
+  ctx.fillStyle='#ffd166';ctx.font='700 11px Fira Code';ctx.fillText('3. Max-pool 2×2',pX,pY-8);
   const pmaps=res.pmaps||fmaps.map(fm=>maxPool(fm,2));
   pmaps.forEach((pm,fi)=>{
     const fy=pY+fi*70,pcs=4.5,col=filters[fi].c;
@@ -356,7 +356,7 @@ function render(){
 
   // 4. Classification
   const cX=535,cY=OY,hasInk=grid.some(row=>row.some(v=>v>.05));
-  ctx.fillStyle='#ffd166';ctx.font='700 11px Fira Code';ctx.fillText('4. Dense \u2192 Softmax',cX,cY-8);
+  ctx.fillStyle='#ffd166';ctx.font='700 11px Fira Code';ctx.fillText('4. Densa → Softmax',cX,cY-8);
 
   if(hasInk&&res.best>=0){
     ctx.fillStyle='rgba(6,6,12,.92)';ctx.beginPath();ctx.roundRect(cX,cY+2,58,58,10);ctx.fill();
@@ -383,10 +383,10 @@ function render(){
   // Bottom
   ctx.fillStyle='rgba(6,6,12,.85)';ctx.beginPath();ctx.roundRect(12,258,726,72,8);ctx.fill();
   ctx.fillStyle='#7d7a8c';ctx.font='400 9px Fira Code';
-  ctx.fillText('LeNet: Input(28\u00d728) \u2192 Conv(5\u00d75,6) \u2192 Pool \u2192 Conv(5\u00d75,16) \u2192 Pool \u2192 FC(120) \u2192 FC(84) \u2192 10 digits',22,276);
-  ctx.fillText('Key: the same filter slides across the entire image \u2192 detects features regardless of position (translation invariance).',22,292);
-  ctx.fillText('Real LeNet learns filters via backprop. Here we use hand-crafted edge detectors to illustrate the concept.',22,308);
-  ctx.fillText('Try drawing different digits \u2014 notice how different filters activate for curves vs. straight lines!',22,324);
+  ctx.fillText('LeNet: entrada(28×28) → conv(5×5,6) → pool → conv(5×5,16) → pool → FC(120) → FC(84) → 10 dígitos',22,276);
+  ctx.fillText('Clave: el mismo filtro se desliza por toda la imagen → detecta rasgos independientemente de su posición (invariancia a traslación).',22,292);
+  ctx.fillText('La LeNet real aprende los filtros mediante retropropagación. Aquí usamos detectores de borde diseñados a mano para ilustrar el concepto.',22,308);
+  ctx.fillText('Prueba a dibujar dígitos distintos: fíjate en cómo se activan filtros diferentes para curvas frente a líneas rectas.',22,324);
 }
 
 function clearGrid(){ for(let r=0;r<G;r++) grid[r].fill(0); }
@@ -407,7 +407,7 @@ const presets=[
 ];
 const ctrl=addControls(el);
 presets.forEach(p=>{const b=document.createElement('button');b.className='btn';b.textContent=p.n;b.onclick=()=>{p.f();startScan()};ctrl.appendChild(b);});
-const clrBtn=document.createElement('button');clrBtn.className='btn';clrBtn.textContent='\u21bb Clear';
+const clrBtn=document.createElement('button');clrBtn.className='btn';clrBtn.textContent='↻ Borrar';
 clrBtn.onclick=()=>{clearGrid();scanRow=-1;if(animId){cancelAnimationFrame(animId);animId=null;}render()};
 ctrl.appendChild(clrBtn);
 buildTemplates();
@@ -418,7 +418,7 @@ render();
 //  LSTM — Gate Visualization (unchanged, already good)
 // ============================================================
 (function(){const el=$('demo-lstm'),[c,ctx]=createCanvas(el,750,340);
-addHint(el,'Feed words into the LSTM. Watch the 3 gates control what to forget, store, and output.');
+addHint(el,'Introduce palabras en el LSTM. Observa cómo las 3 compuertas controlan qué olvidar, qué guardar y qué emitir.');
 const words=['I','love','this','amazing','movie','!','It','was','terrible','though'];
 let pos=-1,cellState=0,hidden=0,gateHistory=[];
 function feedWord(){if(pos>=words.length-1)return;pos++;
@@ -449,31 +449,31 @@ ctx.fillText(w,x+ww/2-2,wy+17);ctx.textAlign='left'});
 let cx2=80,cy2=55,cw=280,ch=120;
 ctx.fillStyle='rgba(78,205,196,.04)';ctx.beginPath();ctx.roundRect(cx2,cy2,cw,ch,12);ctx.fill();
 ctx.strokeStyle='#4ecdc4';ctx.lineWidth=2;ctx.beginPath();ctx.roundRect(cx2,cy2,cw,ch,12);ctx.stroke();
-ctx.fillStyle='#4ecdc4';ctx.font='700 12px Fira Code';ctx.fillText('LSTM Cell',cx2+90,cy2+20);
+ctx.fillStyle='#4ecdc4';ctx.font='700 12px Fira Code';ctx.fillText('Celda LSTM',cx2+90,cy2+20);
 let gw=58,gh=60,gy=cy2+35;
 let fg=gateHistory.length?gateHistory[gateHistory.length-1].f:0.5;
 let ig=gateHistory.length?gateHistory[gateHistory.length-1].i:0.5;
 let og=gateHistory.length?gateHistory[gateHistory.length-1].o:0.5;
-drawGate(cx2+18,gy,gw,gh,fg,'Forget','#ff6b6b');
-drawGate(cx2+88,gy,gw,gh,ig,'Input','#38bdf8');
-drawGate(cx2+158,gy,gw,gh,og,'Output','#a78bfa');
+drawGate(cx2+18,gy,gw,gh,fg,'Olvido','#ff6b6b');
+drawGate(cx2+88,gy,gw,gh,ig,'Entrada','#38bdf8');
+drawGate(cx2+158,gy,gw,gh,og,'Salida','#a78bfa');
 let csNorm=(Math.tanh(cellState)+1)/2;
 ctx.fillStyle='#111120';ctx.beginPath();ctx.roundRect(cx2+228,gy,38,gh,4);ctx.fill();
 ctx.fillStyle='#ffd16666';ctx.beginPath();ctx.roundRect(cx2+228,gy+gh*(1-csNorm),38,gh*csNorm,4);ctx.fill();
 ctx.strokeStyle='#ffd166';ctx.lineWidth=1;ctx.beginPath();ctx.roundRect(cx2+228,gy,38,gh,4);ctx.stroke();
-ctx.fillStyle='#ffd166';ctx.font='600 8px Fira Code';ctx.textAlign='center';ctx.fillText('Cell',cx2+247,gy-6);
+ctx.fillStyle='#ffd166';ctx.font='600 8px Fira Code';ctx.textAlign='center';ctx.fillText('Celda',cx2+247,gy-6);
 ctx.fillText(cellState.toFixed(2),cx2+247,gy+gh/2+3);ctx.textAlign='left';
 let rx=385,ry=55;
 ctx.fillStyle='rgba(6,6,12,.88)';ctx.beginPath();ctx.roundRect(rx,ry,355,120,10);ctx.fill();
-ctx.fillStyle='#ff6b6b';ctx.font='600 10px Fira Code';ctx.fillText('Forget Gate: "Should I keep old memory?"',rx+10,ry+18);
-ctx.fillStyle='#38bdf8';ctx.fillText('Input Gate: "How much new info to store?"',rx+10,ry+38);
-ctx.fillStyle='#a78bfa';ctx.fillText('Output Gate: "What to reveal as output?"',rx+10,ry+58);
-ctx.fillStyle='#ffd166';ctx.fillText('Cell State: long-term memory highway',rx+10,ry+78);
+ctx.fillStyle='#ff6b6b';ctx.font='600 10px Fira Code';ctx.fillText('Compuerta de olvido: «¿mantengo la memoria anterior?»',rx+10,ry+18);
+ctx.fillStyle='#38bdf8';ctx.fillText('Compuerta de entrada: «¿cuánta info nueva guardo?»',rx+10,ry+38);
+ctx.fillStyle='#a78bfa';ctx.fillText('Compuerta de salida: «¿qué revelo como salida?»',rx+10,ry+58);
+ctx.fillStyle='#ffd166';ctx.fillText('Estado de celda: autopista de memoria a largo plazo',rx+10,ry+78);
 ctx.fillStyle='#7d7a8c';ctx.font='400 9px Fira Code';
-ctx.fillText('Key insight: cell state flows through with minimal change',rx+10,ry+98);
+ctx.fillText('Idea clave: el estado de celda fluye con cambios mínimos',rx+10,ry+98);
 ctx.fillText('\u2192 gradients can flow far back in time (no vanishing!)',rx+10,ry+112);
 let hy2=188;
-ctx.fillStyle='#ffd166';ctx.font='600 10px Fira Code';ctx.fillText('Gate values over time:',15,hy2);
+ctx.fillStyle='#ffd166';ctx.font='600 10px Fira Code';ctx.fillText('Valores de compuerta a lo largo del tiempo:',15,hy2);
 if(gateHistory.length>0){let bw=Math.min(70,700/gateHistory.length);
 gateHistory.forEach((g,gi)=>{let x=15+gi*bw;let bh=35;
 ctx.fillStyle='#ff6b6b55';ctx.fillRect(x,hy2+8,bw/3-1,bh*g.f);
@@ -483,23 +483,23 @@ ctx.fillStyle=gi===pos?'#ffd166':'#7d7a8c';ctx.font='500 8px Fira Code';ctx.text
 ctx.fillText(g.w,x+bw/2,hy2+bh+22);ctx.textAlign='left'})}
 let sy=240;
 ctx.fillStyle='rgba(6,6,12,.85)';ctx.beginPath();ctx.roundRect(15,sy,720,35,6);ctx.fill();
-ctx.fillStyle='#7d7a8c';ctx.font='500 9px Fira Code';ctx.fillText('Hidden output (sentiment): ',25,sy+14);
+ctx.fillStyle='#7d7a8c';ctx.font='500 9px Fira Code';ctx.fillText('Salida oculta (sentimiento): ',25,sy+14);
 let sentBar=400,sentVal=(hidden+1)/2;
 ctx.fillStyle='#111120';ctx.beginPath();ctx.roundRect(200,sy+5,sentBar,18,4);ctx.fill();
 let grd=ctx.createLinearGradient(200,0,200+sentBar,0);grd.addColorStop(0,'#ff6b6b');grd.addColorStop(.5,'#7d7a8c');grd.addColorStop(1,'#34d399');
 ctx.fillStyle=grd;ctx.beginPath();ctx.roundRect(200,sy+5,sentBar,18,4);ctx.fill();
 ctx.fillStyle='#fff';ctx.fillRect(200+sentBar*sentVal-1.5,sy+2,3,24);
-ctx.fillStyle='#e4e2df';ctx.font='600 9px Fira Code';ctx.fillText('Negative',620,sy+12);ctx.fillText('Positive',620,sy+26);
+ctx.fillStyle='#e4e2df';ctx.font='600 9px Fira Code';ctx.fillText('Negativo',620,sy+12);ctx.fillText('Positivo',620,sy+26);
 ctx.fillStyle='rgba(6,6,12,.85)';ctx.beginPath();ctx.roundRect(15,284,720,50,8);ctx.fill();
-ctx.fillStyle='#4ecdc4';ctx.font='600 10px Fira Code';ctx.fillText('Why LSTM beats vanilla RNN:',25,302);
+ctx.fillStyle='#4ecdc4';ctx.font='600 10px Fira Code';ctx.fillText('Por qué LSTM supera a una RNN “vanilla”:',25,302);
 ctx.fillStyle='#e4e2df';ctx.font='400 9px Fira Code';
 ctx.fillText('RNN: gradients shrink exponentially over long sequences \u2192 forgets early words',25,318);
 ctx.fillText('LSTM: cell state highway + gates \u2192 can remember "love" even after many words!',25,332)}
 const ctrl=addControls(el);
-const fb2=document.createElement('button');fb2.className='btn';fb2.textContent='\u25b6 Feed Word';fb2.onclick=feedWord;
-let tmr=null;const ab=document.createElement('button');ab.className='btn';ab.textContent='\u23e9 Auto';
+const fb2=document.createElement('button');fb2.className='btn';fb2.textContent='▶ Siguiente palabra';fb2.onclick=feedWord;
+let tmr=null;const ab=document.createElement('button');ab.className='btn';ab.textContent='⏩ Auto';
 ab.onclick=()=>{if(tmr){clearInterval(tmr);tmr=null;ab.classList.remove('active')}else{tmr=setInterval(()=>{feedWord();if(pos>=words.length-1){clearInterval(tmr);tmr=null;ab.classList.remove('active')}},500);ab.classList.add('active')}};
-const rst=document.createElement('button');rst.className='btn';rst.textContent='\u21bb Reset';
+const rst=document.createElement('button');rst.className='btn';rst.textContent='↻ Reiniciar';
 rst.onclick=()=>{pos=-1;cellState=0;hidden=0;gateHistory=[];if(tmr){clearInterval(tmr);tmr=null;ab.classList.remove('active')}draw()};
 ctrl.appendChild(fb2);ctrl.appendChild(ab);ctrl.appendChild(rst);draw()})();
 
@@ -507,7 +507,7 @@ ctrl.appendChild(fb2);ctrl.appendChild(ab);ctrl.appendChild(rst);draw()})();
 //  SVM — Maximum-Margin Classifier (unchanged)
 // ============================================================
 (function(){const el=$('demo-svm'),[c,ctx]=createCanvas(el,750,320);
-addHint(el,'Left-click = Red, Right-click = Blue. Watch SVM find the maximum-margin boundary. Support vectors are circled.');
+addHint(el,'Clic izquierdo = rojo, clic derecho = azul. Observa cómo la SVM encuentra la frontera de máximo margen. Los vectores soporte van marcados con un círculo.');
 let pts=[];function init(){pts=[];for(let i=0;i<10;i++){pts.push({x:rand(40,300),y:rand(40,280),c:0});pts.push({x:rand(450,710),y:rand(40,280),c:1})}}
 init();
 function solveSVM(){if(pts.length<4)return null;
@@ -540,24 +540,24 @@ ctx.setLineDash([]);
 let svs=pts.filter(p=>{let d=Math.abs(w.x*p.x+w.y*p.y+b);return d<margin*1.2});
 svs.forEach(p=>{ctx.beginPath();ctx.arc(p.x,p.y,12,0,TAU);ctx.strokeStyle='#ffd166';ctx.lineWidth=2;ctx.stroke()});
 ctx.fillStyle='rgba(6,6,12,.88)';ctx.beginPath();ctx.roundRect(8,8,220,42,8);ctx.fill();
-ctx.fillStyle='#ffd166';ctx.font='600 11px Fira Code';ctx.fillText('Margin: '+margin.toFixed(1)+'px',18,28);
-ctx.fillStyle='#7d7a8c';ctx.font='400 9px Fira Code';ctx.fillText('Support vectors: '+svs.length+' (circled)',18,44)}
+ctx.fillStyle='#ffd166';ctx.font='600 11px Fira Code';ctx.fillText('Margen: '+margin.toFixed(1)+'px',18,28);
+ctx.fillStyle='#7d7a8c';ctx.font='400 9px Fira Code';ctx.fillText('Vectores soporte: '+svs.length+' (circundados)',18,44)}
 pts.forEach(p=>{ctx.save();ctx.shadowColor=p.c?'#38bdf8':'#ff6b6b';ctx.shadowBlur=5;
 ctx.beginPath();ctx.arc(p.x,p.y,6,0,TAU);ctx.fillStyle=p.c?'#38bdf8':'#ff6b6b';ctx.fill();ctx.restore()});
 ctx.fillStyle='rgba(6,6,12,.85)';ctx.beginPath();ctx.roundRect(15,284,720,30,6);ctx.fill();
 ctx.fillStyle='#7d7a8c';ctx.font='400 9px Fira Code';
-ctx.fillText('SVM maximizes the gap (margin) between classes. Only the closest points (support vectors) matter!',25,303)}
+ctx.fillText('La SVM maximiza la separación (margen) entre clases. Solo importan los puntos más cercanos (vectores soporte).',25,303)}
 c.onclick=e=>{let r=c.getBoundingClientRect();pts.push({x:(e.clientX-r.left)*750/r.width,y:(e.clientY-r.top)*320/r.height,c:0});draw()};
 c.oncontextmenu=e=>{e.preventDefault();let r=c.getBoundingClientRect();pts.push({x:(e.clientX-r.left)*750/r.width,y:(e.clientY-r.top)*320/r.height,c:1});draw()};
 const ctrl=addControls(el);
-const rst=document.createElement('button');rst.className='btn';rst.textContent='\u21bb Reset';rst.onclick=()=>{init();draw()};
+const rst=document.createElement('button');rst.className='btn';rst.textContent='↻ Reiniciar';rst.onclick=()=>{init();draw()};
 ctrl.appendChild(rst);draw()})();
 
 // ============================================================
 //  GMM + EM (unchanged)
 // ============================================================
 (function(){const el=$('demo-gmm'),[c,ctx]=createCanvas(el,750,320);
-addHint(el,'Click "Step EM" to run one E+M iteration. Watch clusters converge from random initialization.');
+addHint(el,'Pulsa “Paso EM” para ejecutar una iteración E+M. Observa cómo los clústeres convergen desde una inicialización aleatoria.');
 let pts=[],K=3,means=[],sigmas=[],pis=[];
 function init(){pts=[];
 let centers=[{x:180,y:100},{x:400,y:220},{x:600,y:100}];
@@ -582,16 +582,16 @@ means.forEach((m,k)=>{ctx.save();ctx.shadowColor=colors[k];ctx.shadowBlur=12;
 ctx.beginPath();ctx.arc(m.x,m.y,8,0,TAU);ctx.fillStyle=colors[k];ctx.fill();ctx.restore();
 ctx.fillStyle='#000';ctx.font='bold 9px Fira Code';ctx.textAlign='center';ctx.fillText('\u03bc'+(k+1),m.x,m.y+3);ctx.textAlign='left'});
 ctx.fillStyle='rgba(6,6,12,.88)';ctx.beginPath();ctx.roundRect(8,8,200,28,6);ctx.fill();
-ctx.fillStyle='#ffd166';ctx.font='600 11px Fira Code';ctx.fillText('EM Iteration: '+emStep,18,28);
+ctx.fillStyle='#ffd166';ctx.font='600 11px Fira Code';ctx.fillText('Iteración EM: '+emStep,18,28);
 ctx.fillStyle='rgba(6,6,12,.85)';ctx.beginPath();ctx.roundRect(15,280,720,35,8);ctx.fill();
 ctx.fillStyle='#4ecdc4';ctx.font='500 9px Fira Code';
-ctx.fillText('E-step: compute P(cluster k | point) using current means/variances',25,295);
-ctx.fillText('M-step: update means/variances using soft assignments \u2192 iterate until convergence!',25,310)}
+ctx.fillText('Paso E: calcula P(clúster k | punto) usando medias/varianzas actuales',25,295);
+ctx.fillText('Paso M: actualiza medias/varianzas usando asignaciones suaves → iterar hasta converger',25,310)}
 const ctrl=addControls(el);
-const sb=document.createElement('button');sb.className='btn';sb.textContent='\u25b6 Step EM';sb.onclick=()=>{eStep();mStep();emStep++;draw()};
-let tmr=null;const ab=document.createElement('button');ab.className='btn';ab.textContent='\u23e9 Auto';
+const sb=document.createElement('button');sb.className='btn';sb.textContent='▶ Paso EM';sb.onclick=()=>{eStep();mStep();emStep++;draw()};
+let tmr=null;const ab=document.createElement('button');ab.className='btn';ab.textContent='⏩ Auto';
 ab.onclick=()=>{if(tmr){clearInterval(tmr);tmr=null;ab.classList.remove('active')}else{tmr=setInterval(()=>{eStep();mStep();emStep++;draw()},200);ab.classList.add('active')}};
-const rst2=document.createElement('button');rst2.className='btn';rst2.textContent='\u21bb Reset';
+const rst2=document.createElement('button');rst2.className='btn';rst2.textContent='↻ Reiniciar';
 rst2.onclick=()=>{init();emStep=0;if(tmr){clearInterval(tmr);tmr=null;ab.classList.remove('active')}draw()};
 ctrl.appendChild(sb);ctrl.appendChild(ab);ctrl.appendChild(rst2);draw()})();
 
@@ -600,7 +600,7 @@ ctrl.appendChild(sb);ctrl.appendChild(ab);ctrl.appendChild(rst2);draw()})();
 // ============================================================
 (function(){
 const el=$('demo-rf'),[c,ctx]=createCanvas(el,750,380);
-addHint(el,'Grow trees one by one. Each tree shows its own colored decision regions. The "Forest" panel shows the majority vote.');
+addHint(el,'Haz crecer árboles uno a uno. Cada árbol muestra sus propias regiones de decisión. El panel “Bosque” muestra el voto mayoritario.');
 
 const DW=300,DH=220;
 let pts=[];
@@ -657,27 +657,27 @@ function draw(){
     const pw=CW-20, ph=280;
     ctx.fillStyle='rgba(6,6,12,.92)';ctx.beginPath();ctx.roundRect(10,topY,pw,ph,8);ctx.fill();
     ctx.strokeStyle='#ffd16644';ctx.lineWidth=1;ctx.beginPath();ctx.roundRect(10,topY,pw,ph,8);ctx.stroke();
-    ctx.fillStyle='#ffd166';ctx.font='700 11px Fira Code';ctx.fillText('Data Points \u2014 Two classes with overlap',20,topY+18);
-    ctx.fillStyle='#7d7a8c';ctx.font='400 9px Fira Code';ctx.fillText('Click "+1 Tree" to grow decision trees. Each tree will learn a different partition of this data.',20,topY+33);
+    ctx.fillStyle='#ffd166';ctx.font='700 11px Fira Code';ctx.fillText('Puntos de datos — dos clases con solapamiento',20,topY+18);
+    ctx.fillStyle='#7d7a8c';ctx.font='400 9px Fira Code';ctx.fillText('Pulsa “+1 árbol” para crear árboles de decisión. Cada árbol aprenderá una partición distinta de estos datos.',20,topY+33);
     drawDots(20,topY+40,pw-20,ph-50,5);
     // Legend
     ctx.beginPath();ctx.arc(CW-150,topY+18,5,0,TAU);ctx.fillStyle='#ff6b6b';ctx.fill();
-    ctx.fillStyle='#ff6b6b';ctx.font='500 9px Fira Code';ctx.fillText('Class A',CW-140,topY+22);
+    ctx.fillStyle='#ff6b6b';ctx.font='500 9px Fira Code';ctx.fillText('Clase A',CW-140,topY+22);
     ctx.beginPath();ctx.arc(CW-80,topY+18,5,0,TAU);ctx.fillStyle='#38bdf8';ctx.fill();
-    ctx.fillStyle='#38bdf8';ctx.font='500 9px Fira Code';ctx.fillText('Class B',CW-70,topY+22);
+    ctx.fillStyle='#38bdf8';ctx.font='500 9px Fira Code';ctx.fillText('Clase B',CW-70,topY+22);
     // Bottom explanation
     const ey=topY+ph+8;
     ctx.fillStyle='rgba(6,6,12,.85)';ctx.beginPath();ctx.roundRect(10,ey,CW-20,76,8);ctx.fill();
     ctx.fillStyle='#7d7a8c';ctx.font='400 9px Fira Code';
-    ctx.fillText('Each tree sees a random bootstrap sample (bagging) and considers random feature subsets at each split.',20,ey+18);
-    ctx.fillText('Individual trees are noisy and overfit, but the majority vote averages out errors \u2192 strong ensemble!',20,ey+34);
-    ctx.fillText('This is "Bootstrap AGGregatING" \u2014 parallelizable and robust. Add more trees to see accuracy improve.',20,ey+50);
-    ctx.fillText('\ud83d\udca1 Compare: Random Forest (parallel + diversity) vs. AdaBoost below (sequential + focus on mistakes)',20,ey+66);
+    ctx.fillText('Cada árbol ve una muestra *bootstrap* aleatoria (bagging) y considera subconjuntos aleatorios de características en cada partición.',20,ey+18);
+    ctx.fillText('Los árboles individuales son ruidosos y sobreajustan, pero el voto mayoritario promedia errores → ¡ensamblado fuerte!',20,ey+34);
+    ctx.fillText('Esto es “Bootstrap AGGregatING” (bagging): paralelizable y robusto. Añade más árboles para ver cómo mejora la precisión.',20,ey+50);
+    ctx.fillText('💡 Compara: Random Forest (paralelo + diversidad) vs. AdaBoost debajo (secuencial + foco en errores)',20,ey+66);
     return;
   }
 
   // === Layout with trees: individual panels (top row) + forest panel (right, taller) ===
-  // Tree panels: fit maxShow panels on the left, forest panel on the right
+  // Árbol panels: fit maxShow panels on the left, forest panel on the right
   const forestW=Math.max(260, CW*0.38);
   const treesAreaW=CW-forestW-pad*2-10;
   const pw=Math.floor((treesAreaW-pad*(maxShow-1))/maxShow);
@@ -689,7 +689,7 @@ function draw(){
     const ox=8+i*(pw+pad), col=TC[ti%TC.length];
     ctx.fillStyle='rgba(6,6,12,.92)';ctx.beginPath();ctx.roundRect(ox,topY,pw,ph,8);ctx.fill();
     ctx.strokeStyle=col+'55';ctx.lineWidth=1;ctx.beginPath();ctx.roundRect(ox,topY,pw,ph,8);ctx.stroke();
-    ctx.fillStyle=col;ctx.font='700 9px Fira Code';ctx.fillText('Tree '+(ti+1),ox+6,topY+14);
+    ctx.fillStyle=col;ctx.font='700 9px Fira Code';ctx.fillText('Árbol '+(ti+1),ox+6,topY+14);
     const inner=4;
     drawRegions(trees[ti],ox+inner,topY+20,pw-inner*2,ph-28,.22);
     const splits=treeSplits(trees[ti]);
@@ -699,15 +699,15 @@ function draw(){
       ctx.stroke();ctx.setLineDash([])});
     drawDots(ox+inner,topY+20,pw-inner*2,ph-28,2.5);
     const acc=pts.filter(p=>treePredict(trees[ti],p.x,p.y)===p.c).length;
-    ctx.fillStyle=col;ctx.font='600 8px Fira Code';ctx.fillText('Acc: '+(acc/pts.length*100).toFixed(0)+'%',ox+6,topY+ph-6);
+    ctx.fillStyle=col;ctx.font='600 8px Fira Code';ctx.fillText('Prec: '+(acc/pts.length*100).toFixed(0)+'%',ox+6,topY+ph-6);
   }
-  if(n>5){ctx.fillStyle='#7d7a8c';ctx.font='400 8px Fira Code';ctx.fillText('(last 5 of '+n+')',8,topY+ph+12)}
+  if(n>5){ctx.fillStyle='#7d7a8c';ctx.font='400 8px Fira Code';ctx.fillText('(últimos 5 de '+n+')',8,topY+ph+12)}
 
   // === Forest panel (right side, full height) ===
   const fx=CW-forestW-4, fy=topY, fh=ph;
   ctx.fillStyle='rgba(6,6,12,.92)';ctx.beginPath();ctx.roundRect(fx,fy,forestW,fh,8);ctx.fill();
   ctx.strokeStyle='#34d39955';ctx.lineWidth=1.5;ctx.beginPath();ctx.roundRect(fx,fy,forestW,fh,8);ctx.stroke();
-  ctx.fillStyle='#34d399';ctx.font='700 11px Fira Code';ctx.fillText('\ud83c\udf32 Forest Majority Vote ('+n+' trees)',fx+8,fy+16);
+  ctx.fillStyle='#34d399';ctx.font='700 11px Fira Code';ctx.fillText('🌲 Voto mayoritario del bosque ('+n+' árboles)',fx+8,fy+16);
   // Regions
   const fi=6, fpw=forestW-fi*2, fph=fh-50;
   const step2=4;
@@ -722,7 +722,7 @@ function draw(){
   const fA=fAcc/pts.length;
   ctx.fillStyle='rgba(6,6,12,.85)';ctx.beginPath();ctx.roundRect(fx+fi,fy+fph+28,fpw,18,4);ctx.fill();
   ctx.fillStyle='#34d39988';ctx.beginPath();ctx.roundRect(fx+fi,fy+fph+28,fpw*fA,18,4);ctx.fill();
-  ctx.fillStyle='#e4e2df';ctx.font='bold 10px Fira Code';ctx.fillText('Forest Accuracy: '+(fA*100).toFixed(0)+'%',fx+fi+6,fy+fph+41);
+  ctx.fillStyle='#e4e2df';ctx.font='bold 10px Fira Code';ctx.fillText('Precisión del bosque: '+(fA*100).toFixed(0)+'%',fx+fi+6,fy+fph+41);
 
   // === Bottom: accuracy comparison + explanation ===
   const by=topY+ph+8+(n>5?14:0);
@@ -731,31 +731,31 @@ function draw(){
   // Accuracy bars
   let bestTA=0;trees.forEach(t=>{const a=pts.filter(p=>treePredict(t,p.x,p.y)===p.c).length/pts.length;if(a>bestTA)bestTA=a});
   const bx2=16, bw2=280, bh2=16;
-  ctx.fillStyle='#ffd166';ctx.font='700 10px Fira Code';ctx.fillText('Accuracy:',bx2,by+16);
-  ctx.fillStyle='#ff6b6b';ctx.font='500 9px Fira Code';ctx.fillText('Best single tree:',bx2,by+34);
+  ctx.fillStyle='#ffd166';ctx.font='700 10px Fira Code';ctx.fillText('Precisión:',bx2,by+16);
+  ctx.fillStyle='#ff6b6b';ctx.font='500 9px Fira Code';ctx.fillText('Mejor árbol individual:',bx2,by+34);
   ctx.fillStyle='#1a1a2e';ctx.beginPath();ctx.roundRect(bx2+110,by+24,bw2,bh2,3);ctx.fill();
   ctx.fillStyle='#ff6b6b88';ctx.beginPath();ctx.roundRect(bx2+110,by+24,bw2*bestTA,bh2,3);ctx.fill();
   ctx.fillStyle='#e4e2df';ctx.font='600 9px Fira Code';ctx.fillText((bestTA*100).toFixed(0)+'%',bx2+115+bw2*bestTA,by+37);
 
-  ctx.fillStyle='#34d399';ctx.font='500 9px Fira Code';ctx.fillText('Forest ('+n+' trees):',bx2,by+56);
+  ctx.fillStyle='#34d399';ctx.font='500 9px Fira Code';ctx.fillText('Bosque ('+n+' árboles):',bx2,by+56);
   ctx.fillStyle='#1a1a2e';ctx.beginPath();ctx.roundRect(bx2+110,by+46,bw2,bh2,3);ctx.fill();
   ctx.fillStyle='#34d39988';ctx.beginPath();ctx.roundRect(bx2+110,by+46,bw2*fA,bh2,3);ctx.fill();
   ctx.fillStyle='#e4e2df';ctx.font='600 9px Fira Code';ctx.fillText((fA*100).toFixed(0)+'%',bx2+115+bw2*fA,by+59);
 
   // Explanation on the right side of accuracy bars
   ctx.fillStyle='#7d7a8c';ctx.font='400 9px Fira Code';
-  ctx.fillText('Each tree sees a random bootstrap sample + random features.',bx2+420,by+16);
-  ctx.fillText('Individual trees overfit, but voting averages out errors.',bx2+420,by+32);
-  ctx.fillText('More trees = smoother boundary = better generalization!',bx2+420,by+48);
+  ctx.fillText('Cada árbol ve un *bootstrap* aleatorio + características aleatorias.',bx2+420,by+16);
+  ctx.fillText('Los árboles individuales sobreajustan, pero el voto promedia errores.',bx2+420,by+32);
+  ctx.fillText('Más árboles = frontera más suave = mejor generalización.',bx2+420,by+48);
   ctx.fillStyle='#4ecdc4';ctx.font='500 9px Fira Code';
-  ctx.fillText('\ud83d\udca1 This is "Bootstrap AGGregatING" (bagging).',bx2+420,by+64);
+  ctx.fillText('💡 Esto es “Bootstrap AGGregatING” (bagging).',bx2+420,by+64);
 }
 
 const ctrl=addControls(el);
-[{n:'\ud83c\udf33 +1 Tree',f:1},{n:'\ud83c\udf32 +5 Trees',f:5},{n:'\ud83c\udf3f +20 Trees',f:20}].forEach(o=>{
+[{n:'🌳 +1 árbol',f:1},{n:'🌲 +5 árboles',f:5},{n:'🌿 +20 árboles',f:20}].forEach(o=>{
   const b=document.createElement('button');b.className='btn';b.textContent=o.n;
   b.onclick=()=>{for(let i=0;i<o.f;i++)trees.push(buildTree(pts,3));draw()};ctrl.appendChild(b)});
-const rst=document.createElement('button');rst.className='btn';rst.textContent='\u21bb Reset';
+const rst=document.createElement('button');rst.className='btn';rst.textContent='↻ Reiniciar';
 rst.onclick=()=>{trees=[];seedPts();draw()};ctrl.appendChild(rst);draw();
 })();
 
@@ -764,7 +764,7 @@ rst.onclick=()=>{trees=[];seedPts();draw()};ctrl.appendChild(rst);draw();
 // ============================================================
 (function(){
 const el=$('demo-ada'),[c,ctx]=createCanvas(el,750,480);
-addHint(el,'Click "+1 Round" to add a weak learner. Watch: (1) bigger circles = higher weight, (2) each stump targets hardest mistakes, (3) ensemble accuracy climbs.');
+addHint(el,'Pulsa “+1 ronda” para añadir un aprendiz débil. Observa: (1) círculos más grandes = mayor peso, (2) cada stump ataca los errores más difíciles, (3) la precisión del ensamblado sube.');
 
 const DW2=280,DH2=200;
 let pts=[],stumps=[],round=0;
@@ -824,9 +824,9 @@ function draw(){
   ctx.fillStyle='rgba(6,6,12,.92)';ctx.beginPath();ctx.roundRect(lx,ly,lw,lh,8);ctx.fill();
   ctx.strokeStyle='#ffd16644';ctx.lineWidth=1;ctx.beginPath();ctx.roundRect(lx,ly,lw,lh,8);ctx.stroke();
   ctx.fillStyle='#ffd166';ctx.font='700 10px Fira Code';
-  ctx.fillText(ns===0?'Data (equal weights)':'Round '+round+': Weighted Data',lx+8,ly+15);
+  ctx.fillText(ns===0?'Datos (pesos iguales)':'Ronda '+round+': datos ponderados',lx+8,ly+15);
   ctx.fillStyle='#7d7a8c';ctx.font='400 8px Fira Code';
-  ctx.fillText(ns===0?'All points start with equal weight 1/N':'Bigger = higher weight (harder examples)',lx+8,ly+27);
+  ctx.fillText(ns===0?'Todos los puntos empiezan con peso 1/N':'Más grande = más peso (ejemplos más difíciles)',lx+8,ly+27);
   // Current stump line
   if(ns>0){const s=stumps[ns-1];
     ctx.strokeStyle='#ffd166aa';ctx.lineWidth=2;ctx.setLineDash([6,4]);ctx.beginPath();
@@ -834,7 +834,7 @@ function draw(){
     else{const sy=ly+32+s.value/DH2*(lh-36);ctx.moveTo(lx+4,sy);ctx.lineTo(lx+lw-4,sy)}
     ctx.stroke();ctx.setLineDash([]);
     ctx.fillStyle='#ffd166';ctx.font='600 8px Fira Code';
-    ctx.fillText('Stump '+ns+': '+s.axis+'\u2264'+s.value.toFixed(0)+' (\u03b1='+(s.alpha).toFixed(2)+')',lx+8,ly+lh-6)}
+    ctx.fillText('Stump '+ns+': '+s.axis+'≤'+s.value.toFixed(0)+' (α='+(s.alpha).toFixed(2)+')',lx+8,ly+lh-6)}
   drawPts(lx+8,ly+32,lw-16,lh-36,true);
 
   // RIGHT: Combined Ensemble
@@ -842,7 +842,7 @@ function draw(){
   ctx.fillStyle='rgba(6,6,12,.92)';ctx.beginPath();ctx.roundRect(rx,ry,rw,rh,8);ctx.fill();
   ctx.strokeStyle='#34d39944';ctx.lineWidth=1;ctx.beginPath();ctx.roundRect(rx,ry,rw,rh,8);ctx.stroke();
   ctx.fillStyle='#34d399';ctx.font='700 10px Fira Code';
-  ctx.fillText(ns===0?'Ensemble (no stumps yet)':'Ensemble: '+ns+' Stumps Combined',rx+8,ry+15);
+  ctx.fillText(ns===0?'Ensamblado (aún sin stumps)':'Ensamblado: '+ns+' stumps combinados',rx+8,ry+15);
   if(ns>0){
     const step=6;
     for(let py2=0;py2<rh-36;py2+=step)for(let px2=0;px2<rw-16;px2+=step){
@@ -853,14 +853,14 @@ function draw(){
       ctx.fillRect(rx+8+px2,ry+32+py2,step,step);}
     const acc=pts.filter(p=>ensemblePredict(p)===p.c).length;
     ctx.fillStyle='#34d399';ctx.font='bold 11px Fira Code';
-    ctx.fillText('Acc: '+(acc/pts.length*100).toFixed(0)+'%',rx+rw-80,ry+15)}
+    ctx.fillText('Prec: '+(acc/pts.length*100).toFixed(0)+'%',rx+rw-80,ry+15)}
   drawPts(rx+8,ry+32,rw-16,rh-36,false);
 
-  // FAR RIGHT: Stump Timeline
+  // FAR RIGHT: Línea temporal de stumps
   const tx=612,ty=8,tw=130,th=230;
   ctx.fillStyle='rgba(6,6,12,.92)';ctx.beginPath();ctx.roundRect(tx,ty,tw,th,8);ctx.fill();
   ctx.strokeStyle='#a78bfa44';ctx.lineWidth=1;ctx.beginPath();ctx.roundRect(tx,ty,tw,th,8);ctx.stroke();
-  ctx.fillStyle='#a78bfa';ctx.font='700 9px Fira Code';ctx.fillText('Stump Timeline',tx+8,ty+15);
+  ctx.fillStyle='#a78bfa';ctx.font='700 9px Fira Code';ctx.fillText('Línea temporal de stumps',tx+8,ty+15);
   const ms=Math.min(ns,10);
   for(let i=0;i<ms;i++){
     const si=ns<=10?i:ns-10+i,s=stumps[si],sy2=ty+24+i*19,cur=si===ns-1;
@@ -873,18 +873,18 @@ function draw(){
     ctx.fillStyle=cur?'#ffd166aa':'#a78bfa66';ctx.beginPath();ctx.roundRect(tx+24,sy2+8,aw,5,2);ctx.fill();
     ctx.fillStyle='#7d7a8c';ctx.font='400 6px Fira Code';ctx.fillText('\u03b1='+s.alpha.toFixed(2),tx+76,sy2+13);
   }
-  if(ns===0){ctx.fillStyle='#4a475a';ctx.font='400 8px Fira Code';ctx.fillText('No stumps yet.',tx+8,ty+40);ctx.fillText('Click +1 Round',tx+8,ty+54)}
+  if(ns===0){ctx.fillStyle='#4a475a';ctx.font='400 8px Fira Code';ctx.fillText('Aún no hay stumps.',tx+8,ty+40);ctx.fillText('Pulsa +1 ronda',tx+8,ty+54)}
 
   // BOTTOM: How It Works
   const by=250;
   ctx.fillStyle='rgba(6,6,12,.92)';ctx.beginPath();ctx.roundRect(10,by,730,100,8);ctx.fill();
-  ctx.fillStyle='#ffd166';ctx.font='700 11px Fira Code';ctx.fillText('How AdaBoost Works \u2014 5 Simple Steps:',20,by+18);
+  ctx.fillStyle='#ffd166';ctx.font='700 11px Fira Code';ctx.fillText('Cómo funciona AdaBoost — 5 pasos simples:',20,by+18);
   const steps=[
-    {ic:'\u2696\ufe0f',t:'Equal Weights',d:'Every point starts at w=1/N',c:'#7d7a8c'},
-    {ic:'\ud83e\udeb5',t:'Train Stump',d:'Find best single split line',c:'#ffd166'},
-    {ic:'\ud83d\udcca',t:'Score Stump',d:'\u03b1 = \u00bdln((1-err)/err)',c:'#a78bfa'},
-    {ic:'\u2b06\ufe0f',t:'Re-weight',d:'Wrong pts get bigger weights',c:'#ff6b6b'},
-    {ic:'\ud83d\udd01',t:'Repeat!',d:'Next stump targets mistakes',c:'#34d399'}
+    {ic:'⚖️',t:'Pesos iguales',d:'Cada punto empieza con w=1/N',c:'#7d7a8c'},
+    {ic:'🪵',t:'Entrenar stump',d:'Encontrar la mejor partición simple',c:'#ffd166'},
+    {ic:'📊',t:'Puntuar stump',d:'α = ½ ln((1-err)/err)',c:'#a78bfa'},
+    {ic:'⬆️',t:'Reponderar',d:'Los errores reciben más peso',c:'#ff6b6b'},
+    {ic:'🔁',t:'Repetir',d:'El siguiente stump corrige errores',c:'#34d399'}
   ];
   const sw=140;
   steps.forEach((s,i)=>{const sx=15+i*sw;
@@ -900,16 +900,16 @@ function draw(){
 
   // Key Insight
   ctx.fillStyle='rgba(6,6,12,.85)';ctx.beginPath();ctx.roundRect(10,by+108,730,112,8);ctx.fill();
-  ctx.fillStyle='#4ecdc4';ctx.font='600 10px Fira Code';ctx.fillText('Key Insight: Weak + Weak + Weak = Strong!',20,by+126);
+  ctx.fillStyle='#4ecdc4';ctx.font='600 10px Fira Code';ctx.fillText('Idea clave: débil + débil + débil = fuerte',20,by+126);
   ctx.fillStyle='#e4e2df';ctx.font='400 9px Fira Code';
   ctx.fillText('Each stump alone is barely better than random (a "weak learner" \u2014 just one split!).',20,by+144);
-  ctx.fillText('But by focusing each new stump on the mistakes of previous ones, the ensemble becomes a "strong learner".',20,by+160);
+  ctx.fillText('Pero al hacer que cada stump nuevo se centre en los errores de los anteriores, el ensamblado se convierte en un “aprendiz fuerte”.',20,by+160);
   ctx.fillText('Final prediction = weighted vote: H(x) = sign(\u03a3 \u03b1\u209chc(x)). More accurate stumps get higher voting power \u03b1.',20,by+176);
-  ctx.fillText('Boosting = sequential, focus on mistakes.  Bagging (Random Forest) = parallel, focus on diversity.',20,by+192);
+  ctx.fillText('Boosting = secuencial, centrado en errores. Bagging (Random Forest) = paralelo, centrado en diversidad.',20,by+192);
 
   // Weak -> Strong visual
   if(ns>0){const mX=20,mY=by+206;
-    ctx.fillStyle='#7d7a8c';ctx.font='400 9px Fira Code';ctx.fillText('Weak:',mX,mY);
+    ctx.fillStyle='#7d7a8c';ctx.font='400 9px Fira Code';ctx.fillText('Débiles:',mX,mY);
     for(let i=0;i<Math.min(ns,8);i++){
       ctx.fillStyle='#ffd16644';ctx.beginPath();ctx.roundRect(mX+48+i*22,mY-10,18,14,3);ctx.fill();
       ctx.fillStyle='#ffd166';ctx.font='600 7px Fira Code';ctx.fillText('h'+(i+1),mX+51+i*22,mY)}
@@ -919,13 +919,13 @@ function draw(){
 }
 
 const ctrl=addControls(el);
-const ab1=document.createElement('button');ab1.className='btn';ab1.textContent='\u25b6 +1 Round';ab1.onclick=addStump;
-const ab5=document.createElement('button');ab5.className='btn';ab5.textContent='\u23e9 +5 Rounds';ab5.onclick=()=>{for(let i=0;i<5;i++)addStump()};
+const ab1=document.createElement('button');ab1.className='btn';ab1.textContent='▶ +1 ronda';ab1.onclick=addStump;
+const ab5=document.createElement('button');ab5.className='btn';ab5.textContent='⏩ +5 rondas';ab5.onclick=()=>{for(let i=0;i<5;i++)addStump()};
 let autoTmr=null;
-const abAuto=document.createElement('button');abAuto.className='btn';abAuto.textContent='\u25b6\ufe0f Auto';
+const abAuto=document.createElement('button');abAuto.className='btn';abAuto.textContent='▶️ Auto';
 abAuto.onclick=()=>{if(autoTmr){clearInterval(autoTmr);autoTmr=null;abAuto.classList.remove('active')}
   else{autoTmr=setInterval(()=>{addStump();if(round>=20){clearInterval(autoTmr);autoTmr=null;abAuto.classList.remove('active')}},400);abAuto.classList.add('active')}};
-const abRst=document.createElement('button');abRst.className='btn';abRst.textContent='\u21bb Reset';
+const abRst=document.createElement('button');abRst.className='btn';abRst.textContent='↻ Reiniciar';
 abRst.onclick=()=>{if(autoTmr){clearInterval(autoTmr);autoTmr=null;abAuto.classList.remove('active')}seedPts();draw()};
 ctrl.appendChild(ab1);ctrl.appendChild(ab5);ctrl.appendChild(abAuto);ctrl.appendChild(abRst);draw();
 })();
