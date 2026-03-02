@@ -1,57 +1,57 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Section VI — The Deep Learning Explosion · How AI Works</title>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Sección VI — La explosión del deep learning · How AI Works</title>
 <link rel="stylesheet" href="styles.css">
 </head><body>
 <div class="progress-bar" style="background:linear-gradient(90deg,var(--a5),var(--a6))"></div>
 <button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <nav class="topnav"><a href="index.html" class="logo">How AI Works</a><div class="nav-links"><a href="section1.html">I</a><a href="section2.html">II</a><a href="section3.html">III</a><a href="section4.html">IV</a><a href="section5.html">V</a><a href="section6.html" class="active">VI</a><a href="section7.html">VII</a><a href="section8.html">VIII</a></div></nav>
-<div class="section-hero"><div class="era-label" style="color:var(--a5)">Section VI · 2012–2015</div>
-<h1>The Deep Learning Explosion</h1><p>AlexNet triggers the revolution. GANs, attention, ResNets, and Word2Vec reshape AI forever.</p>
-<div class="nav-arrows"><a href="section5.html">&larr; Section V</a><a href="section7.html">Section VII &rarr;</a></div></div>
+<div class="section-hero"><div class="era-label" style="color:var(--a5)">Sección VI · 2012–2015</div>
+<h1>La explosión del deep learning</h1><p>AlexNet dispara la revolución. GANs, atención, ResNets y Word2Vec remodelan la IA para siempre.</p>
+<div class="nav-arrows"><a href="section5.html">&larr; Sección V</a><a href="section7.html">Sección VII &rarr;</a></div></div>
 <div class="models-container">
 
 <!-- ======= ALEXNET ======= -->
 <div class="model-card" id="model-alexnet"><div class="mc-head"><span class="mc-year" style="color:var(--a5)">2012</span><div class="mc-info">
 <h3>AlexNet <a href="https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html" target="_blank" class="paper-link">Paper</a></h3>
-<p>Krizhevsky's CNN crushed ImageNet by 10%. Deeper than LeNet with ReLU, dropout, and GPU training. Proved deep learning works at scale.</p>
-<div class="model-lineage">Scales <a href="section4.html#model-cnn">CNN/LeNet</a> with <a href="section6.html#model-dropout">Dropout</a> and GPU power; its ImageNet victory ignites the deep learning era leading to <a href="section6.html#model-resnet">ResNet</a> and <a href="section8.html#model-vit">ViT</a>.</div>
+<p>La CNN de Krizhevsky arrasó en ImageNet por ~10%. Más profunda que LeNet, con ReLU, dropout y entrenamiento en GPU. Demostró que el deep learning funciona a escala.</p>
+<div class="model-lineage">Escala <a href="section4.html#model-cnn">CNN/LeNet</a> con <a href="section6.html#model-dropout">dropout</a> y potencia de GPU; su victoria en ImageNet enciende la era del deep learning, llevando a <a href="section6.html#model-resnet">ResNet</a> y <a href="section8.html#model-vit">ViT</a>.</div>
 </div></div>
-<div class="mc-formula" style="color:var(--a5)">227×227 → Conv(96) → Pool → Conv(256) → Pool → Conv(384) → Conv(384) → Conv(256) → FC → 1000 classes</div>
+<div class="mc-formula" style="color:var(--a5)">227×227 → Conv(96) → Pool → Conv(256) → Pool → Conv(384) → Conv(384) → Conv(256) → FC → 1000 clases</div>
 <div class="mc-demo" id="demo-alex"></div></div>
 
 <!-- ======= DROPOUT ======= -->
 <div class="model-card" id="model-dropout"><div class="mc-head"><span class="mc-year" style="color:var(--a5)">2014</span><div class="mc-info">
 <h3>Dropout <a href="https://jmlr.org/papers/v15/srivastava14a.html" target="_blank" class="paper-link">Paper</a></h3>
-<p>Randomly "kill" neurons during training. Forces the network to not rely on any single neuron — like training an ensemble of sub-networks.</p>
-<div class="model-lineage">Key regularization technique first used in <a href="section6.html#model-alexnet">AlexNet</a>; prevents overfitting in all deep networks from <a href="section6.html#model-resnet">ResNet</a> to <a href="section7.html#model-transformer">Transformer</a>.</div>
+<p>“Apaga” neuronas aleatoriamente durante el entrenamiento. Obliga a la red a no depender de una sola neurona — como entrenar un ensamblado de subredes.</p>
+<div class="model-lineage">Técnica clave de regularización usada (popularizada) en <a href="section6.html#model-alexnet">AlexNet</a>; evita el sobreajuste en redes profundas desde <a href="section6.html#model-resnet">ResNet</a> hasta <a href="section7.html#model-transformer">Transformer</a>.</div>
 </div></div>
-<div class="mc-formula" style="color:var(--a5)">During training: hᵢ = hᵢ × Bernoulli(p) — each neuron dropped with probability (1-p)</div>
+<div class="mc-formula" style="color:var(--a5)">Durante entrenamiento: hᵢ = hᵢ × Bernoulli(p) — cada neurona se apaga con probabilidad (1-p)</div>
 <div class="mc-demo" id="demo-drop"></div></div>
 
 <!-- ======= WORD2VEC ======= -->
 <div class="model-card" id="model-word2vec"><div class="mc-head"><span class="mc-year" style="color:var(--a5)">2013</span><div class="mc-info">
 <h3>Word2Vec <a href="https://arxiv.org/abs/1301.3781" target="_blank" class="paper-link">Paper</a></h3>
-<p>Mikolov's word embeddings — learn vector representations where semantic relationships become arithmetic: King − Man + Woman ≈ Queen.</p>
-<div class="model-lineage">Simplifies <a href="section5.html#model-nnlm">NNLM</a> into efficient embedding training; its dense vectors become the input layer for <a href="section7.html#model-elmo">ELMo</a>, <a href="section7.html#model-bert">BERT</a>, and all modern NLP.</div>
+<p>Los *word embeddings* de Mikolov — aprende vectores donde las relaciones semánticas se vuelven aritmética: King − Man + Woman ≈ Queen.</p>
+<div class="model-lineage">Simplifica <a href="section5.html#model-nnlm">NNLM</a> en un entrenamiento eficiente de embeddings; sus vectores densos se convierten en la capa de entrada para <a href="section7.html#model-elmo">ELMo</a>, <a href="section7.html#model-bert">BERT</a> y el NLP moderno.</div>
 </div></div>
-<div class="mc-formula" style="color:var(--a5)">king − man + woman ≈ queen — semantic arithmetic in vector space!</div>
+<div class="mc-formula" style="color:var(--a5)">king − man + woman ≈ queen — ¡aritmética semántica en el espacio vectorial!</div>
 <div class="mc-demo" id="demo-w2v"></div></div>
 
 <!-- ======= VAE ======= -->
 <div class="model-card" id="model-vae"><div class="mc-head"><span class="mc-year" style="color:var(--a5)">2013</span><div class="mc-info">
 <h3>VAE (Variational Autoencoder) <a href="https://arxiv.org/abs/1312.6114" target="_blank" class="paper-link">Paper</a></h3>
-<p>Kingma's generative model — encode data into a smooth latent distribution, sample, and decode. The latent space is continuous and interpolatable.</p>
-<div class="model-lineage">Adds probabilistic sampling to <a href="section5.html#model-sparse-ae">Sparse Autoencoder</a> using <a href="section4.html#model-gmm">GMM+EM</a>'s variational ideas; its latent space concept flows into <a href="section8.html#model-diffusion">Diffusion Models</a>.</div>
+<p>El modelo generativo de Kingma — codifica datos en una distribución latente suave, muestrea y decodifica. El espacio latente es continuo e interpolable.</p>
+<div class="model-lineage">Añade muestreo probabilístico al <a href="section5.html#model-sparse-ae">autoencoder disperso</a> usando ideas variacionales de <a href="section4.html#model-gmm">GMM+EM</a>; su concepto de espacio latente influye en los <a href="section8.html#model-diffusion">modelos de difusión</a>.</div>
 </div></div>
-<div class="mc-formula" style="color:var(--a5)">Encode: x → (μ, σ²) → sample z ~ N(μ,σ²) → Decode: z → x̂ — smooth generative latent space</div>
+<div class="mc-formula" style="color:var(--a5)">Codificar: x → (μ, σ²) → muestrear z ~ N(μ,σ²) → Decodificar: z → x̂ — espacio latente generativo suave</div>
 <div class="mc-demo" id="demo-vae"></div></div>
 
 <!-- ======= GAN ======= -->
 <div class="model-card" id="model-gan"><div class="mc-head"><span class="mc-year" style="color:var(--a5)">2014</span><div class="mc-info">
 <h3>GAN (Generative Adversarial Network) <a href="https://arxiv.org/abs/1406.2661" target="_blank" class="paper-link">Paper</a></h3>
-<p>Goodfellow's brilliant idea — two networks competing: Generator creates fakes, Discriminator judges real vs fake. They push each other to improve.</p>
-<div class="model-lineage">A new generative paradigm rivaling <a href="section6.html#model-vae">VAE</a>; leads to <a href="section7.html#model-stylegan">StyleGAN</a> for photorealistic faces, later surpassed by <a href="section8.html#model-diffusion">Diffusion Models</a>.</div>
+<p>La brillante idea de Goodfellow — dos redes compiten: el generador crea falsos y el discriminador juzga real vs. falso. Se empujan mutuamente a mejorar.</p>
+<div class="model-lineage">Un nuevo paradigma generativo que compite con <a href="section6.html#model-vae">VAE</a>; conduce a <a href="section7.html#model-stylegan">StyleGAN</a> para caras fotorrealistas, y más tarde es superado por <a href="section8.html#model-diffusion">modelos de difusión</a>.</div>
 </div></div>
 <div class="mc-formula" style="color:var(--a5)">min_G max_D [E log D(x) + E log(1-D(G(z)))] — Generator vs Discriminator game</div>
 <div class="mc-demo" id="demo-gan"></div></div>
@@ -59,8 +59,8 @@
 <!-- ======= SEQ2SEQ ======= -->
 <div class="model-card" id="model-seq2seq"><div class="mc-head"><span class="mc-year" style="color:var(--a5)">2014</span><div class="mc-info">
 <h3>Seq2Seq + Attention <a href="https://arxiv.org/abs/1409.0473" target="_blank" class="paper-link">Paper</a></h3>
-<p>Bahdanau's attention mechanism — let the decoder LOOK BACK at relevant input parts at each step. Revolutionary for translation.</p>
-<div class="model-lineage">Extends <a href="section4.html#model-lstm">LSTM</a> encoder-decoder with attention; this attention idea is generalized into the pure-attention <a href="section7.html#model-transformer">Transformer</a>.</div>
+<p>El mecanismo de atención de Bahdanau — permite que el decodificador MIRE HACIA ATRÁS a las partes relevantes de la entrada en cada paso. Revolucionario para traducción.</p>
+<div class="model-lineage">Extiende el esquema codificador-decodificador con <a href="section4.html#model-lstm">LSTM</a> añadiendo atención; esta idea se generaliza en el <a href="section7.html#model-transformer">Transformer</a> (solo atención).</div>
 </div></div>
 <div class="mc-formula" style="color:var(--a5)">attention(Q,K) = softmax(Q·Kᵀ) · V — focus on relevant input words for each output word</div>
 <div class="mc-demo" id="demo-attn"></div></div>
@@ -68,23 +68,23 @@
 <!-- ======= RESNET ======= -->
 <div class="model-card" id="model-resnet"><div class="mc-head"><span class="mc-year" style="color:var(--a5)">2015</span><div class="mc-info">
 <h3>ResNet (Residual Network) <a href="https://arxiv.org/abs/1512.03385" target="_blank" class="paper-link">Paper</a></h3>
-<p>He's skip connections — learn the residual F(x) = H(x) − x. Output = F(x) + x. Lets gradients flow through shortcuts, enabling 152+ layers.</p>
-<div class="model-lineage">Solves the depth problem of <a href="section6.html#model-alexnet">AlexNet</a> with skip connections; its residual design is adopted by <a href="section7.html#model-transformer">Transformer</a> and <a href="section8.html#model-vit">ViT</a>.</div>
+<p>Las conexiones de salto de He — aprender el residual F(x) = H(x) − x. Salida = F(x) + x. Permite que los gradientes fluyan por atajos, habilitando 152+ capas.</p>
+<div class="model-lineage">Resuelve el problema de profundidad de <a href="section6.html#model-alexnet">AlexNet</a> con conexiones de salto; su diseño residual se adopta en <a href="section7.html#model-transformer">Transformer</a> y <a href="section8.html#model-vit">ViT</a>.</div>
 </div></div>
-<div class="mc-formula" style="color:var(--a5)">output = F(x) + x — skip connection lets gradient flow through identity shortcut</div>
+<div class="mc-formula" style="color:var(--a5)">salida = F(x) + x — la conexión de salto deja fluir el gradiente por el atajo identidad</div>
 <div class="mc-demo" id="demo-resnet"></div></div>
 
 <!-- ======= BATCHNORM ======= -->
 <div class="model-card" id="model-batchnorm"><div class="mc-head"><span class="mc-year" style="color:var(--a5)">2015</span><div class="mc-info">
 <h3>Batch Normalization <a href="https://arxiv.org/abs/1502.03167" target="_blank" class="paper-link">Paper</a></h3>
-<p>Ioffe & Szegedy — normalize each layer's inputs to zero mean and unit variance. Speeds up training and allows higher learning rates.</p>
-<div class="model-lineage">Stabilizes deep network training for <a href="section6.html#model-resnet">ResNet</a> and beyond; adapted as LayerNorm in <a href="section7.html#model-transformer">Transformer</a> and all modern architectures.</div>
+<p>Ioffe y Szegedy — normaliza las entradas de cada capa a media cero y varianza unitaria. Acelera el entrenamiento y permite mayores tasas de aprendizaje.</p>
+<div class="model-lineage">Estabiliza el entrenamiento de redes profundas para <a href="section6.html#model-resnet">ResNet</a> y más allá; se adapta como LayerNorm en <a href="section7.html#model-transformer">Transformer</a> y arquitecturas modernas.</div>
 </div></div>
 <div class="mc-formula" style="color:var(--a5)">x̂ = (x − μ_batch) / √(σ²_batch + ε) · γ + β — normalize, then scale and shift (learnable)</div>
 <div class="mc-demo" id="demo-bn"></div></div>
 
 </div>
-<footer><a href="section5.html">&larr; Section V</a> &middot; <a href="section7.html">Section VII: The Transformer Revolution &rarr;</a></footer>
+<footer><a href="section5.html">&larr; Sección V</a> &middot; <a href="section7.html">Sección VII: La revolución Transformer &rarr;</a></footer>
 <script src="shared.js"></script>
 
 <script>
@@ -130,7 +130,7 @@
 <script>
 // ===== ALEXNET =====
 (function(){const el=$('demo-alex'),[c,ctx]=createCanvas(el,750,340);
-addHint(el,'Click "Feed Image" to watch a photo flow through the layers. See spatial size shrink and feature channels multiply!');
+addHint(el,'Pulsa “Alimentar imagen” para ver cómo una imagen fluye por las capas. Verás cómo se reduce el tamaño espacial y se multiplican los canales de rasgos.');
 // Simulated 8x8 "image" input with recognizable pattern (a simple face-like pattern)
 const inputImg=[];
 for(let r=0;r<8;r++) for(let ci=0;ci<8;ci++){
@@ -171,12 +171,12 @@ function makeFeatureMaps(input,nMaps,size,layerIdx){
   return maps;
 }
 const layers=[
-  {name:'Input',size:8,maps:1,c:'#38bdf8',desc:'8\u00d78 grayscale image'},
-  {name:'Conv1+ReLU',size:6,maps:4,c:'#ff6b6b',desc:'Edge detection (4 filters)'},
+  {name:'Entrada',size:8,maps:1,c:'#38bdf8',desc:'imagen 8×8 en escala de grises'},
+  {name:'Conv1+ReLU',size:6,maps:4,c:'#ff6b6b',desc:'detección de bordes (4 filtros)'},
   {name:'MaxPool',size:3,maps:4,c:'#ffd166',desc:'Shrink 2\u00d7, keep strongest'},
-  {name:'Conv2+ReLU',size:3,maps:6,c:'#4ecdc4',desc:'Texture patterns (6 filters)'},
-  {name:'Flatten+FC',size:1,maps:8,c:'#a78bfa',desc:'8 neurons, fully connected'},
-  {name:'Output',size:1,maps:3,c:'#34d399',desc:'3 classes: face/cat/car'}
+  {name:'Conv2+ReLU',size:3,maps:6,c:'#4ecdc4',desc:'patrones de textura (6 filtros)'},
+  {name:'Flatten+FC',size:1,maps:8,c:'#a78bfa',desc:'8 neuronas, totalmente conectadas'},
+  {name:'Salida',size:1,maps:3,c:'#34d399',desc:'3 clases: cara/gato/coche'}
 ];
 const fmaps=[];
 fmaps.push([inputImg]);
@@ -282,28 +282,28 @@ function draw(){ctx.clearRect(0,0,750,340);
   // Bottom explanation
   ctx.fillStyle='rgba(6,6,12,.88)';ctx.beginPath();ctx.roundRect(15,270,720,62,8);ctx.fill();
   ctx.fillStyle='#ff6b6b';ctx.font='600 10px Fira Code';
-  ctx.fillText('AlexNet (2012): Won ImageNet with 15.3% top-5 error (prev best: 26%)',25,288);
+  ctx.fillText('AlexNet (2012): ganó ImageNet con 15,3% de error top‑5 (mejor previo: 26%)',25,288);
   ctx.fillStyle='#e4e2df';ctx.font='400 9px Fira Code';
   ctx.fillText('Each conv layer applies filters to detect features. Spatial size shrinks (8\u21926\u21923\u21921) while channels grow (1\u21924\u21926\u21928).',25,304);
   ctx.fillStyle='#7d7a8c';ctx.font='400 8px Fira Code';
-  ctx.fillText('Key: ReLU activation (fast), Dropout (regularize), GPU training (speed), MaxPool (compress spatial info, keep strongest signals)',25,320);
+  ctx.fillText('Clave: activación ReLU (rápida), dropout (regulariza), entrenamiento en GPU (velocidad), MaxPool (comprime info espacial y conserva señales fuertes)',25,320);
 }
 const ctrl=addControls(el);
-const fb=document.createElement('button');fb.className='btn';fb.textContent='\u25b6 Feed Image';fb.onclick=startFeed;
-const rst=document.createElement('button');rst.className='btn';rst.textContent='\u21bb Reset';
+const fb=document.createElement('button');fb.className='btn';fb.textContent='▶ Alimentar imagen';fb.onclick=startFeed;
+const rst=document.createElement('button');rst.className='btn';rst.textContent='↻ Reiniciar';
 rst.onclick=()=>{activeLayer=-1;if(animId){cancelAnimationFrame(animId);animId=null;}draw();};
 ctrl.appendChild(fb);ctrl.appendChild(rst);draw()})();
 
 
 // ===== DROPOUT =====
 (function(){const el=$('demo-drop'),[c,ctx]=createCanvas(el,750,300);
-addHint(el,'Toggle Training vs Inference. Drag the slider to change drop rate. "Resample" shows different masks.');
-let mode='train',dropRate=.5;
+addHint(el,'Alterna entrenamiento vs inferencia. Mueve el deslizador para cambiar la tasa de dropout. “Remuestrear” genera máscaras distintas.');
+let mode='train',dropTasa=.5;
 const layers=[[0,1,2,3],[0,1,2,3,4,5],[0,1,2,3,4,5],[0,1,2,3]];
-let masks=layers.map(l=>l.map(()=>Math.random()>dropRate?1:0));
-function resample(){masks=layers.map(l=>l.map(()=>Math.random()>dropRate?1:0));draw();}
+let masks=layers.map(l=>l.map(()=>Math.random()>dropTasa?1:0));
+function resample(){masks=layers.map(l=>l.map(()=>Math.random()>dropTasa?1:0));draw();}
 function draw(){ctx.clearRect(0,0,750,300);
-let lx=[120,280,440,600],ly=140,labels=['Input','Hidden 1','Hidden 2','Output'],colors=['#38bdf8','#a78bfa','#fb923c','#34d399'];
+let lx=[120,280,440,600],ly=140,labels=['Entrada','Oculta 1','Oculta 2','Salida'],colors=['#38bdf8','#a78bfa','#fb923c','#34d399'];
 for(let l=0;l<3;l++){layers[l].forEach((fi,fIdx)=>{layers[l+1].forEach((ti,tIdx)=>{
 let fA=mode==='test'||masks[l][fIdx],tA=mode==='test'||masks[l+1][tIdx];
 let fy=ly-layers[l].length*20+fIdx*40,ty=ly-layers[l+1].length*20+tIdx*40;
@@ -318,42 +318,42 @@ ctx.strokeStyle=active?colors[li]:'#333';ctx.lineWidth=active?2:1;ctx.stroke();c
 if(!active){ctx.strokeStyle='#ff6b6b';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(lx[li]-8,y-8);ctx.lineTo(lx[li]+8,y+8);ctx.stroke();
 ctx.beginPath();ctx.moveTo(lx[li]+8,y-8);ctx.lineTo(lx[li]-8,y+8);ctx.stroke();}
 ctx.fillStyle=active?'#e4e2df':'#4a475a';ctx.font='bold 8px Fira Code';ctx.textAlign='center';
-ctx.fillText(active?(mode==='test'?'×'+(1-dropRate).toFixed(1):'ON'):'OFF',lx[li],y+3);ctx.textAlign='left';})});
+ctx.fillText(active?(mode==='test'?'×'+(1-dropTasa).toFixed(1):'ON'):'OFF',lx[li],y+3);ctx.textAlign='left';})});
 layers.forEach((l,i)=>{ctx.fillStyle=colors[i];ctx.font='500 9px Fira Code';ctx.textAlign='center';ctx.fillText(labels[i],lx[i],ly+l.length*20+20);ctx.textAlign='left';});
 ctx.fillStyle='rgba(6,6,12,.9)';ctx.beginPath();ctx.roundRect(8,8,250,55,8);ctx.fill();
 ctx.fillStyle=mode==='train'?'#ff6b6b':'#34d399';ctx.font='700 14px Fira Code';
 ctx.fillText(mode==='train'?'\ud83c\udfb2 TRAINING':'\u2705 INFERENCE',18,30);
 ctx.fillStyle='#7d7a8c';ctx.font='400 9px Fira Code';
-ctx.fillText(mode==='train'?'Drop rate: '+(dropRate*100).toFixed(0)+'% \u2014 neurons randomly killed':'All active, weights \u00d7 '+(1-dropRate).toFixed(1)+' (keep prob)',18,50);
+ctx.fillText(mode==='train'?'Tasa de dropout: '+(dropTasa*100).toFixed(0)+'% \u2014 neurons randomly killed':'All active, weights \u00d7 '+(1-dropTasa).toFixed(1)+' (prob. de mantener)',18,50);
 let active=masks.flat().filter(v=>v).length,total=masks.flat().length;
 ctx.fillStyle='rgba(6,6,12,.85)';ctx.beginPath();ctx.roundRect(15,255,720,38,8);ctx.fill();
 ctx.fillStyle='#ffd166';ctx.font='500 9px Fira Code';
-ctx.fillText(mode==='train'?'Active: '+active+'/'+total+'. Each sample sees a DIFFERENT sub-network \u2192 ensemble effect!':
-'Test: all neurons ON, outputs \u00d7 keep prob ('+(1-dropRate).toFixed(1)+') to match training scale.',25,278);}
+ctx.fillText(mode==='train'?'Activas: '+active+'/'+total+'. Each sample sees a DIFFERENT sub-network \u2192 ensemble effect!':
+'Test: all neurons ON, outputs \u00d7 keep prob ('+(1-dropTasa).toFixed(1)+') to match training scale.',25,278);}
 const ctrl=addControls(el);
-const mt=document.createElement('button');mt.className='btn active';mt.textContent='\ud83c\udfb2 Train';
-const mi=document.createElement('button');mi.className='btn';mi.textContent='\u2705 Inference';
+const mt=document.createElement('button');mt.className='btn active';mt.textContent='🎲 Entrenamiento';
+const mi=document.createElement('button');mi.className='btn';mi.textContent='✅ Inferencia';
 mt.onclick=()=>{mode='train';mt.classList.add('active');mi.classList.remove('active');resample();};
 mi.onclick=()=>{mode='test';mi.classList.add('active');mt.classList.remove('active');draw();};
-const rs=document.createElement('button');rs.className='btn';rs.textContent='\ud83c\udfb2 Resample';rs.onclick=resample;
+const rs=document.createElement('button');rs.className='btn';rs.textContent='🎲 Remuestrear';rs.onclick=resample;
 // Dropout rate slider
-const dlbl=document.createElement('label');dlbl.textContent='Rate';dlbl.style.cssText='color:#ff6b6b;font:500 10px Fira Code;margin-left:8px';
+const dlbl=document.createElement('label');dlbl.textContent='Tasa';dlbl.style.cssText='color:#ff6b6b;font:500 10px Fira Code;margin-left:8px';
 const dslider=document.createElement('input');dslider.type='range';dslider.min='10';dslider.max='90';dslider.value='50';dslider.style.cssText='width:80px;vertical-align:middle';
 const dval=document.createElement('span');dval.className='btn';dval.style.cssText='min-width:38px;text-align:center;font-size:10px';dval.textContent='50%';
-dslider.oninput=e=>{dropRate=e.target.value/100;dval.textContent=(dropRate*100).toFixed(0)+'%';resample();};
+dslider.oninput=e=>{dropTasa=e.target.value/100;dval.textContent=(dropTasa*100).toFixed(0)+'%';resample();};
 ctrl.appendChild(mt);ctrl.appendChild(mi);ctrl.appendChild(rs);ctrl.appendChild(dlbl);ctrl.appendChild(dslider);ctrl.appendChild(dval);draw()})();
 
 // ===== WORD2VEC =====
 (function(){const el=$('demo-w2v'),[c,ctx]=createCanvas(el,750,320);
-addHint(el,'Click analogies to see semantic arithmetic in vector space.');
+addHint(el,'Pulsa analogías para ver aritmética semántica en el espacio vectorial.');
 const words={king:[.9,.8],queen:[.9,-.8],man:[.3,.7],woman:[.3,-.7],prince:[.7,.5],princess:[.7,-.5],
 dog:[-.6,.3],cat:[-.5,-.3],puppy:[-.4,.4],kitten:[-.3,-.2],
 paris:[-.8,.6],france:[-.7,.8],berlin:[-.8,-.4],germany:[-.7,-.6],tokyo:[-.9,0],japan:[-.8,.1]};
 const analogies=[
-{a:'king',b:'man',c:'woman',result:'queen',desc:'Royalty: gender relationship'},
-{a:'paris',b:'france',c:'germany',result:'berlin',desc:'Capital: country relationship'},
-{a:'puppy',b:'dog',c:'cat',result:'kitten',desc:'Young: species relationship'},
-{a:'prince',b:'man',c:'woman',result:'princess',desc:'Royal gender relationship'}];
+{a:'king',b:'man',c:'woman',result:'queen',desc:'Realeza: relación de género'},
+{a:'paris',b:'france',c:'germany',result:'berlin',desc:'Capital: relación país'},
+{a:'puppy',b:'dog',c:'cat',result:'kitten',desc:'Joven: relación de especie'},
+{a:'prince',b:'man',c:'woman',result:'princess',desc:'Relación de género en realeza'}];
 let selAn=0;
 function draw(){ctx.clearRect(0,0,750,320);let an=analogies[selAn];
 analogies.forEach((a,i)=>{let x=15+i*183,y=8;
@@ -377,29 +377,29 @@ ctx.beginPath();ctx.moveTo(cx2+va[0]*scale,cy2-va[1]*scale);ctx.lineTo(cx2+vb[0]
 ctx.strokeStyle='#34d39988';ctx.beginPath();ctx.moveTo(cx2+vc[0]*scale,cy2-vc[1]*scale);ctx.lineTo(cx2+vr[0]*scale,cy2-vr[1]*scale);ctx.stroke();ctx.setLineDash([]);}
 let rx=440,ry=45;
 ctx.fillStyle='rgba(6,6,12,.9)';ctx.beginPath();ctx.roundRect(rx,ry,300,205,10);ctx.fill();
-ctx.fillStyle='#f472b6';ctx.font='700 12px Fira Code';ctx.fillText('Word Vector Arithmetic',rx+10,ry+22);
+ctx.fillStyle='#f472b6';ctx.font='700 12px Fira Code';ctx.fillText('Aritmética de vectores de palabras',rx+10,ry+22);
 ctx.fillStyle='#ff6b6b';ctx.font='600 11px Fira Code';ctx.fillText(an.a,rx+10,ry+48);
 ctx.fillStyle='#7d7a8c';ctx.fillText(' \u2212 ',rx+60,ry+48);ctx.fillStyle='#38bdf8';ctx.fillText(an.b,rx+80,ry+48);
 ctx.fillStyle='#7d7a8c';ctx.fillText(' + ',rx+130,ry+48);ctx.fillStyle='#ffd166';ctx.fillText(an.c,rx+155,ry+48);
 ctx.fillStyle='#7d7a8c';ctx.fillText(' = ',rx+210,ry+48);ctx.fillStyle='#34d399';ctx.font='700 11px Fira Code';ctx.fillText(an.result+' \u2713',rx+230,ry+48);
 ctx.fillStyle='#e4e2df';ctx.font='400 9px Fira Code';ctx.fillText(an.desc,rx+10,ry+72);
-ctx.fillStyle='#ffd166';ctx.font='600 9px Fira Code';ctx.fillText('How Word2Vec learns:',rx+10,ry+100);
+ctx.fillStyle='#ffd166';ctx.font='600 9px Fira Code';ctx.fillText('Cómo aprende Word2Vec:',rx+10,ry+100);
 ctx.fillStyle='#7d7a8c';ctx.font='400 8px Fira Code';
-ctx.fillText('Skip-gram: predict context from word',rx+10,ry+118);
+ctx.fillText('Skip-gram: predecir contexto a partir de la palabra',rx+10,ry+118);
 ctx.fillText('"The [cat] sat on" \u2192 predict neighbors',rx+10,ry+134);
 ctx.fillText('Similar contexts \u2192 similar vectors',rx+10,ry+150);
-ctx.fillText('Relationships become vector directions',rx+10,ry+166);
+ctx.fillText('Las relaciones se convierten en direcciones vectoriales',rx+10,ry+166);
 ctx.fillText('automatically \u2014 no supervision needed!',rx+10,ry+182);
 ctx.fillStyle='rgba(6,6,12,.85)';ctx.beginPath();ctx.roundRect(15,282,720,30,8);ctx.fill();
 ctx.fillStyle='#7d7a8c';ctx.font='400 9px Fira Code';
-ctx.fillText('Each word = dense vector (50-300 dims). Similar meaning = close in space. Relationships = consistent directions.',25,301);}
+ctx.fillText('Cada palabra = vector denso (50–300 dims). Significado similar = cerca en el espacio. Relaciones = direcciones consistentes.',25,301);}
 c.onclick=e=>{let r=c.getBoundingClientRect(),mx=(e.clientX-r.left)*750/r.width,my=(e.clientY-r.top)*320/r.height;
 analogies.forEach((a,i)=>{let x=15+i*183;if(mx>=x&&mx<=x+176&&my>=8&&my<=36){selAn=i;draw();}});};
 const ctrl=addControls(el);draw()})();
 
 // ===== VAE =====
 (function(){const el=$('demo-vae'),[c,ctx]=createCanvas(el,750,340);
-addHint(el,'Click a category dot OR hover the latent space. Watch encoder produce \u03bc,\u03c3 and decoder generate from z!');
+addHint(el,'Haz clic en un punto de categoría o pasa el ratón por el espacio latente. Observa cómo el codificador produce μ,σ y el decodificador genera desde z.');
 const G=6,NN=G*G;
 const categories=[
   {name:'X',c:'#ff6b6b',z:[-.7,.7],grid:[1,0,0,0,1,0, 0,1,0,1,0,0, 0,0,1,0,0,0, 0,0,1,0,0,0, 0,1,0,1,0,0, 1,0,0,0,1,0]},
@@ -415,13 +415,13 @@ function decodeZ(z1,z2){const out=new Float32Array(NN);let wS=0;
 function draw(){ctx.clearRect(0,0,750,340);
   const z1=curZ[0],z2=curZ[1];
   // 1. ENCODER
-  ctx.fillStyle='#38bdf8';ctx.font='700 10px Fira Code';ctx.fillText('1. Encoder',12,16);
+  ctx.fillStyle='#38bdf8';ctx.font='700 10px Fira Code';ctx.fillText('1. Codificador',12,16);
   let closest=categories[0],minD=99;
   categories.forEach(c2=>{let d=Math.sqrt((z1-c2.z[0])**2+(z2-c2.z[1])**2);if(d<minD){minD=d;closest=c2;}});
   ctx.fillStyle='#08081a';ctx.beginPath();ctx.roundRect(12,22,54,54,4);ctx.fill();
   for(let r=0;r<G;r++) for(let ci=0;ci<G;ci++){let v=closest.grid[r*G+ci]*(1-minD*0.3);
     ctx.fillStyle=v>0.3?closest.c:'#111125';ctx.fillRect(14+ci*8,24+r*8,7,7);}
-  ctx.fillStyle='#7d7a8c';ctx.font='400 7px Fira Code';ctx.fillText('input x',12,88);
+  ctx.fillStyle='#7d7a8c';ctx.font='400 7px Fira Code';ctx.fillText('entrada x',12,88);
   ctx.fillStyle='#4a475a';ctx.font='16px sans-serif';ctx.fillText('\u2192',70,52);
   // mu,sigma
   ctx.fillStyle='rgba(56,189,248,.08)';ctx.beginPath();ctx.roundRect(88,22,52,28,4);ctx.fill();
@@ -454,14 +454,14 @@ function draw(){ctx.clearRect(0,0,750,340);
 
   // 3. DECODER + OUTPUT (fits within 750)
   const dx=374;
-  ctx.fillStyle='#4ecdc4';ctx.font='700 9px Fira Code';ctx.fillText('3. Decode',dx,16);
+  ctx.fillStyle='#4ecdc4';ctx.font='700 9px Fira Code';ctx.fillText('3. Decodificar',dx,16);
   ctx.fillStyle='rgba(78,205,196,.06)';ctx.beginPath();ctx.roundRect(dx,22,50,54,4);ctx.fill();
   ctx.strokeStyle='#4ecdc466';ctx.beginPath();ctx.roundRect(dx,22,50,54,4);ctx.stroke();
   ctx.fillStyle='#7d7a8c';ctx.font='400 7px Fira Code';ctx.fillText('z\u2192x\u0302',dx+8,50);ctx.fillText('net',dx+14,64);
   ctx.fillStyle='#4a475a';ctx.font='16px sans-serif';ctx.fillText('\u2192',dx+55,52);
   // Output grid
   const outX=dx+72,outSz=14;
-  ctx.fillStyle='#4ecdc4';ctx.font='700 9px Fira Code';ctx.fillText('Output x\u0302',outX,16);
+  ctx.fillStyle='#4ecdc4';ctx.font='700 9px Fira Code';ctx.fillText('Salida x̂',outX,16);
   const decoded=decodeZ(z1,z2);
   ctx.fillStyle='#08081a';ctx.beginPath();ctx.roundRect(outX-2,20,G*outSz+4,G*outSz+4,4);ctx.fill();
   for(let r=0;r<G;r++) for(let ci=0;ci<G;ci++){let v=decoded[r*G+ci];
@@ -469,7 +469,7 @@ function draw(){ctx.clearRect(0,0,750,340);
 
   // Large comparison: Input vs Output
   const cmpX=outX+G*outSz+14;
-  ctx.fillStyle='#ffd166';ctx.font='600 8px Fira Code';ctx.fillText('Compare:',cmpX,16);
+  ctx.fillStyle='#ffd166';ctx.font='600 8px Fira Code';ctx.fillText('Comparar:',cmpX,16);
   ctx.fillStyle='#38bdf8';ctx.font='400 7px Fira Code';ctx.fillText('In',cmpX,28);
   for(let r=0;r<G;r++) for(let ci=0;ci<G;ci++){let v2=closest.grid[r*G+ci]*(1-minD*0.3);
     ctx.fillStyle=v2>0.3?'#38bdf8':'#0e0e20';ctx.fillRect(cmpX+14+ci*7,20+r*7,6,6);}
@@ -480,7 +480,7 @@ function draw(){ctx.clearRect(0,0,750,340);
   // 4. Interpolation strip
   const stripY=ly+lh+12;
   ctx.fillStyle='rgba(6,6,12,.92)';ctx.beginPath();ctx.roundRect(12,stripY,726,68,8);ctx.fill();
-  ctx.fillStyle='#ffd166';ctx.font='700 10px Fira Code';ctx.fillText('Key insight: smooth latent space = smooth interpolation!',22,stripY+14);
+  ctx.fillStyle='#ffd166';ctx.font='700 10px Fira Code';ctx.fillText('Idea clave: espacio latente suave = interpolación suave',22,stripY+14);
   const nSteps=12;
   for(let s=0;s<nSteps;s++){let t=s/(nSteps-1);
     let iz1=categories[0].z[0]*(1-t)+categories[1].z[0]*t,iz2=categories[0].z[1]*(1-t)+categories[1].z[1]*t;
@@ -510,13 +510,13 @@ c.onclick=e=>{let r=c.getBoundingClientRect();let mx=(e.clientX-r.left)*750/r.wi
   categories.forEach(cat=>{let cx2=148+210/2+cat.z[0]/1.2*(210/2-12),cy2=6+175/2-cat.z[1]/1.2*(175/2-18);
     if(Math.abs(mx-cx2)<25&&Math.abs(my-cy2)<25){curZ=[cat.z[0],cat.z[1]];draw();}});};
 const ctrl=addControls(el);
-const rst=document.createElement('button');rst.className='btn';rst.textContent='\u21bb Reset';
+const rst=document.createElement('button');rst.className='btn';rst.textContent='↻ Reiniciar';
 rst.onclick=()=>{curZ=[0,0];draw();};ctrl.appendChild(rst);draw()})();
 
 
 // ===== GAN =====
 (function(){const el=$('demo-gan'),[c,ctx]=createCanvas(el,750,320);
-addHint(el,'Watch the Generator (pink) learn to match the Real distribution (green). They converge as G fools D!');
+addHint(el,'Observa cómo el generador (rosa) aprende a igualar la distribución real (verde). Convergen a medida que G engaña a D.');
 let round=0,gMean=80,gStd=100,history=[];
 const realMean=350,realStd=50,plotRange=600;
 function gauss(x,mu,sig){return Math.exp(-0.5*((x-mu)/sig)**2);}
@@ -531,7 +531,7 @@ function step(){round++;
 function draw(){ctx.clearRect(0,0,750,320);
   const pX=15,pY=12,pW=490,pH=175,base=pY+pH-8;
   ctx.fillStyle='rgba(6,6,12,.92)';ctx.beginPath();ctx.roundRect(pX,pY,pW,pH,8);ctx.fill();
-  ctx.fillStyle='#ffd166';ctx.font='700 10px Fira Code';ctx.fillText('Generator learns to match Real distribution',pX+8,pY+14);
+  ctx.fillStyle='#ffd166';ctx.font='700 10px Fira Code';ctx.fillText('El generador aprende a igualar la distribución real',pX+8,pY+14);
   // Draw filled distributions with high peaks
   // Real
   ctx.beginPath();ctx.moveTo(pX+8,base);
@@ -563,40 +563,40 @@ function draw(){ctx.clearRect(0,0,750,320);
   // Right panel
   const rx=520,ry=pY;
   ctx.fillStyle='rgba(6,6,12,.92)';ctx.beginPath();ctx.roundRect(rx,ry,220,pH,8);ctx.fill();
-  ctx.fillStyle='#ffd166';ctx.font='700 12px Fira Code';ctx.fillText('Round '+round,rx+10,ry+20);
+  ctx.fillStyle='#ffd166';ctx.font='700 12px Fira Code';ctx.fillText('Ronda '+round,rx+10,ry+20);
   ctx.fillStyle='#f472b6';ctx.font='600 10px Fira Code';ctx.fillText('\ud83c\udfa8 Generator',rx+10,ry+42);
-  ctx.fillStyle='#7d7a8c';ctx.font='400 8px Fira Code';ctx.fillText('Goal: fool Discriminator',rx+10,ry+56);
+  ctx.fillStyle='#7d7a8c';ctx.font='400 8px Fira Code';ctx.fillText('Objetivo: engañar al discriminador',rx+10,ry+56);
   ctx.fillText('\u03bc='+gMean.toFixed(0)+' \u03c3='+gStd.toFixed(0)+' (target: \u03bc='+realMean+' \u03c3='+realStd+')',rx+10,ry+70);
   ctx.fillStyle='#38bdf8';ctx.font='600 10px Fira Code';ctx.fillText('\ud83d\udd0d Discriminator',rx+10,ry+92);
-  ctx.fillStyle='#7d7a8c';ctx.font='400 8px Fira Code';ctx.fillText('Goal: tell real from fake',rx+10,ry+106);
+  ctx.fillStyle='#7d7a8c';ctx.font='400 8px Fira Code';ctx.fillText('Objetivo: distinguir real de falso',rx+10,ry+106);
   let dAcc=round>0?clamp(1-history[history.length-1].ov*0.7,0.3,0.95):0.95;
-  ctx.fillText('Accuracy: '+(dAcc*100).toFixed(0)+'%',rx+10,ry+120);
+  ctx.fillText('Precisión: '+(dAcc*100).toFixed(0)+'%',rx+10,ry+120);
   let conv=round>0?history[history.length-1].ov:0;
   ctx.fillStyle='#111120';ctx.beginPath();ctx.roundRect(rx+10,ry+130,200,16,3);ctx.fill();
   let cGr=ctx.createLinearGradient(rx+10,0,rx+210,0);cGr.addColorStop(0,'#ff6b6b');cGr.addColorStop(0.5,'#ffd166');cGr.addColorStop(1,'#34d399');
   ctx.fillStyle=cGr;ctx.beginPath();ctx.roundRect(rx+10,ry+130,200*conv,16,3);ctx.fill();
-  ctx.fillStyle='#e4e2df';ctx.font='bold 9px Fira Code';ctx.fillText('Convergence: '+(conv*100).toFixed(0)+'%',rx+14,ry+143);
+  ctx.fillStyle='#e4e2df';ctx.font='bold 9px Fira Code';ctx.fillText('Convergencia: '+(conv*100).toFixed(0)+'%',rx+14,ry+143);
   // Bottom history
   const by=pY+pH+10;
   ctx.fillStyle='rgba(6,6,12,.92)';ctx.beginPath();ctx.roundRect(15,by,720,118,8);ctx.fill();
-  ctx.fillStyle='#ffd166';ctx.font='600 9px Fira Code';ctx.fillText('Training History:',25,by+14);
+  ctx.fillStyle='#ffd166';ctx.font='600 9px Fira Code';ctx.fillText('Historial de entrenamiento:',25,by+14);
   if(history.length>1){ctx.strokeStyle='#34d399';ctx.lineWidth=2;ctx.beginPath();
     history.forEach((h,i)=>{let hx=25+i*(690/60),hy=by+90-h.ov*65;i===0?ctx.moveTo(hx,hy):ctx.lineTo(hx,hy);});ctx.stroke();
     ctx.fillStyle='#34d399';ctx.font='400 7px Fira Code';ctx.fillText('overlap \u2191',690,by+14);}
   ctx.fillStyle='#7d7a8c';ctx.font='400 8px Fira Code';
   ctx.fillText('G and D compete: G improves fakes \u2192 D must adapt \u2192 G improves more \u2192 converges when D can\'t tell them apart!',25,by+110);}
 const ctrl=addControls(el);
-const sb=document.createElement('button');sb.className='btn';sb.textContent='\u25b6 Train';sb.onclick=step;
+const sb=document.createElement('button');sb.className='btn';sb.textContent='▶ Entrenar';sb.onclick=step;
 let tmr=null;const ab=document.createElement('button');ab.className='btn';ab.textContent='\u23e9 Auto';
 ab.onclick=()=>{if(tmr){clearInterval(tmr);tmr=null;ab.classList.remove('active');}else{tmr=setInterval(step,120);ab.classList.add('active');}};
-const rst=document.createElement('button');rst.className='btn';rst.textContent='\u21bb Reset';
+const rst=document.createElement('button');rst.className='btn';rst.textContent='↻ Reiniciar';
 rst.onclick=()=>{round=0;gMean=80;gStd=100;history=[];if(tmr){clearInterval(tmr);tmr=null;ab.classList.remove('active');}draw();};
 ctrl.appendChild(sb);ctrl.appendChild(ab);ctrl.appendChild(rst);draw()})();
 
 
 // ===== SEQ2SEQ + ATTENTION =====
 (function(){const el=$('demo-attn'),[c,ctx]=createCanvas(el,750,300);
-addHint(el,'Click any French word below to see which English words it attends to. Brighter/thicker lines = higher attention.');
+addHint(el,'Pulsa una palabra en francés para ver a qué palabras en inglés atiende. Líneas más brillantes/gruesas = mayor atención.');
 const src=['The','cat','sat','on','the','mat'];
 const tgt=['Le','chat','\u00e9tait','assis','sur','le','tapis'];
 const attnM=[[.8,.05,.02,.02,.08,.03],[.05,.75,.05,.03,.02,.1],[.02,.1,.6,.15,.03,.1],
@@ -604,7 +604,7 @@ const attnM=[[.8,.05,.02,.02,.08,.03],[.05,.75,.05,.03,.02,.1],[.02,.1,.6,.15,.0
 let selT=1;
 function draw(){ctx.clearRect(0,0,750,300);
 let srcX=50,srcY=28,tgtY=195,bw=98,tBw=95;
-ctx.fillStyle='#38bdf8';ctx.font='600 10px Fira Code';ctx.fillText('Source (English):',15,srcY-5);
+ctx.fillStyle='#38bdf8';ctx.font='600 10px Fira Code';ctx.fillText('Fuente (inglés):',15,srcY-5);
 src.forEach((w,i)=>{let x=srcX+i*108;let attn=attnM[selT][i];
 ctx.fillStyle='rgba(56,189,248,'+(0.05+attn*0.4).toFixed(2)+')';ctx.beginPath();ctx.roundRect(x,srcY,bw,32,6);ctx.fill();
 ctx.strokeStyle='rgba(56,189,248,'+(0.2+attn*0.8).toFixed(2)+')';ctx.lineWidth=1+attn*3;ctx.beginPath();ctx.roundRect(x,srcY,bw,32,6);ctx.stroke();
@@ -616,14 +616,14 @@ src.forEach((w,i)=>{let attn=attnM[selT][i];if(attn<.02)return;
   let tx=15+selT*102+tBw/2,ty=tgtY;
   ctx.strokeStyle='rgba(255,209,102,'+attn.toFixed(2)+')';ctx.lineWidth=attn*8;
   ctx.beginPath();ctx.moveTo(sx,sy+12);ctx.quadraticCurveTo((sx+tx)/2,sy+60,tx,ty);ctx.stroke();});
-ctx.fillStyle='#4ecdc4';ctx.font='600 10px Fira Code';ctx.fillText('Target (French) \u2014 click a word:',15,tgtY-8);
+ctx.fillStyle='#4ecdc4';ctx.font='600 10px Fira Code';ctx.fillText('Destino (francés) — pulsa una palabra:',15,tgtY-8);
 tgt.forEach((w,i)=>{let x=15+i*102;let isSel=i===selT;
 ctx.fillStyle=isSel?'rgba(78,205,196,.18)':'rgba(78,205,196,.04)';ctx.beginPath();ctx.roundRect(x,tgtY,tBw,32,6);ctx.fill();
 ctx.strokeStyle=isSel?'#4ecdc4':'#4ecdc433';ctx.lineWidth=isSel?2.5:1;ctx.beginPath();ctx.roundRect(x,tgtY,tBw,32,6);ctx.stroke();
 ctx.fillStyle=isSel?'#e4e2df':'#7d7a8c';ctx.font=(isSel?'700':'400')+' 11px Fira Code';ctx.textAlign='center';ctx.fillText(w,x+tBw/2,tgtY+20);ctx.textAlign='left';});
 ctx.fillStyle='rgba(6,6,12,.85)';ctx.beginPath();ctx.roundRect(15,246,720,48,8);ctx.fill();
-ctx.fillStyle='#ffd166';ctx.font='600 9px Fira Code';ctx.fillText('Attention: "'+tgt[selT]+'" focuses on: '+src.map((w,i)=>attnM[selT][i]>.1?w+' ('+Math.round(attnM[selT][i]*100)+'%)':'').filter(Boolean).join(', '),25,264);
-ctx.fillStyle='#7d7a8c';ctx.font='400 9px Fira Code';ctx.fillText('Without attention: entire input crammed into ONE vector. With attention: decoder looks back at relevant words each step!',25,284);}
+ctx.fillStyle='#ffd166';ctx.font='600 9px Fira Code';ctx.fillText('Atención: "'+tgt[selT]+'" se centra en: '+src.map((w,i)=>attnM[selT][i]>.1?w+' ('+Math.round(attnM[selT][i]*100)+'%)':'').filter(Boolean).join(', '),25,264);
+ctx.fillStyle='#7d7a8c';ctx.font='400 9px Fira Code';ctx.fillText('Sin atención: toda la entrada se comprime en UN solo vector. Con atención: el decodificador mira hacia atrás a palabras relevantes en cada paso.',25,284);}
 c.onclick=e=>{let r=c.getBoundingClientRect(),my=(e.clientY-r.top)*300/r.height,mx=(e.clientX-r.left)*750/r.width;
 if(my>=195-10&&my<=195+42){tgt.forEach((w,i)=>{let x=15+i*102;if(mx>=x&&mx<=x+95){selT=i;draw();}});}};
 const ctrl=addControls(el);
@@ -634,7 +634,7 @@ draw()})();
 
 // ===== RESNET =====
 (function(){const el=$('demo-resnet'),[c,ctx]=createCanvas(el,750,300);
-addHint(el,'Toggle skip connections on/off. Watch gradient dots flow (or vanish!) through the network.');
+addHint(el,'Activa/desactiva conexiones de salto. Observa cómo fluyen (o se desvanecen) los puntos de gradiente por la red.');
 let skipOn=true,depth=8,animT=0,animId=null;
 function startGradAnim(){animT=0;if(animId)cancelAnimationFrame(animId);
   (function tick(){animT+=0.008;draw();if(animT<2)animId=requestAnimationFrame(tick);else{animId=null;draw();}})();}
@@ -700,20 +700,20 @@ let fy=132;ctx.fillStyle='rgba(6,6,12,.88)';ctx.beginPath();ctx.roundRect(15,fy,
 ctx.fillStyle=skipOn?'#ffd166':'#ff6b6b';ctx.font='700 12px Fira Code';
 ctx.fillText(skipOn?'output = F(x) + x  \u2190 skip connection':'output = F(x)  \u2190 no skip (plain)',25,fy+20);
 ctx.fillStyle='#e4e2df';ctx.font='400 9px Fira Code';
-ctx.fillText(skipOn?'Gradient flows through BOTH F(x) path AND identity shortcut. Even if F(x) vanishes, +x path survives!':
+ctx.fillText(skipOn?'El gradiente fluye por el camino F(x) y por el atajo identidad. Aunque F(x) se desvanezca, el camino +x sobrevive.':
 'Gradient must pass through ALL layers sequentially. After many layers \u2192 vanishing gradient problem.',25,fy+38);
-ctx.fillStyle='#7d7a8c';ctx.fillText(skipOn?'ResNet-152 won ImageNet 2015. Skip connections allow 100+ layers!':'Without skips, networks >20 layers become untrainable.',25,fy+52);
+ctx.fillStyle='#7d7a8c';ctx.fillText(skipOn?'ResNet-152 ganó ImageNet 2015. ¡Las conexiones skip permiten 100+ capas!':'Sin skips, redes de >20 capas se vuelven inentrenables.',25,fy+52);
 // Gradient comparison
 ctx.fillStyle='rgba(6,6,12,.85)';ctx.beginPath();ctx.roundRect(15,200,720,92,10);ctx.fill();
-ctx.fillStyle='#a78bfa';ctx.font='600 10px Fira Code';ctx.fillText('Gradient strength at each layer (backprop):',25,218);
-['Layer 1','Layer 4','Layer 8'].forEach((l,li)=>{let y2=228+li*20;
+ctx.fillStyle='#a78bfa';ctx.font='600 10px Fira Code';ctx.fillText('Fuerza del gradiente en cada capa (retropropagación):',25,218);
+['Capa 1','Capa 4','Capa 8'].forEach((l,li)=>{let y2=228+li*20;
 ctx.fillStyle='#7d7a8c';ctx.font='400 9px Fira Code';ctx.fillText(l,25,y2+10);
 ctx.fillStyle='#111120';ctx.fillRect(100,y2,200,14);ctx.fillRect(410,y2,200,14);
 let gs=[1,.8,.6],gn=[1,.25,.02];
 ctx.fillStyle='#34d399';ctx.beginPath();ctx.roundRect(100,y2,200*gs[li],14,2);ctx.fill();
 ctx.fillStyle='#ff6b6b';ctx.beginPath();ctx.roundRect(410,y2,200*gn[li],14,2);ctx.fill();});
-ctx.fillStyle='#34d399';ctx.font='600 8px Fira Code';ctx.fillText('With Skip (ResNet)',100,226);
-ctx.fillStyle='#ff6b6b';ctx.fillText('Without Skip (Plain)',410,226);}
+ctx.fillStyle='#34d399';ctx.font='600 8px Fira Code';ctx.fillText('Con skip (ResNet)',100,226);
+ctx.fillStyle='#ff6b6b';ctx.fillText('Sin skip (plana)',410,226);}
 const ctrl=addControls(el);
 const tog=document.createElement('button');tog.className='btn active';tog.textContent='\u2705 Skip ON';
 tog.onclick=()=>{skipOn=!skipOn;tog.textContent=skipOn?'\u2705 Skip ON':'\u274c Skip OFF';tog.classList.toggle('active');startGradAnim();};
@@ -722,7 +722,7 @@ ctrl.appendChild(tog);ctrl.appendChild(ga);draw()})();
 
 // ===== BATCH NORMALIZATION =====
 (function(){const el=$('demo-bn'),[c,ctx]=createCanvas(el,750,310);
-addHint(el,'Toggle BatchNorm on/off. Watch layer distributions go from tidy to chaotic! All layers share the SAME axis scale.');
+addHint(el,'Activa/desactiva BatchNorm. Observa cómo las distribuciones pasan de ordenadas a caóticas. Todas las capas comparten la MISMA escala.');
 let bnOn=true;
 // FIXED raw activations so toggling BN shows the same data differently
 let rawActs=[];
@@ -789,11 +789,11 @@ function draw(){ctx.clearRect(0,0,750,310);
     ctx.fillStyle='rgba(255,209,102,0.06)';ctx.fillRect(stdL,y+14,stdR-stdL,lh-18);
     // Labels
     ctx.fillStyle=isGood?'#34d399':'#ff6b6b';ctx.font='700 10px Fira Code';ctx.textAlign='center';
-    ctx.fillText('Layer '+(l+1),x+lw/2,y+13);
+    ctx.fillText('Capa '+(l+1),x+lw/2,y+13);
     ctx.fillStyle='#e4e2df';ctx.font='500 8px Fira Code';
     ctx.fillText('\u03bc='+mean.toFixed(1)+' \u03c3='+std.toFixed(1),x+lw/2,y+lh+12);
     if(!bnOn&&l>=3){ctx.fillStyle='#ff6b6b';ctx.font='bold 9px Fira Code';ctx.fillText('\u26a0 EXPLODING!',x+lw/2,y+lh+24);}
-    if(bnOn){ctx.fillStyle='#34d39988';ctx.font='400 7px Fira Code';ctx.fillText('normalized',x+lw/2,y+lh+24);}
+    if(bnOn){ctx.fillStyle='#34d39988';ctx.font='400 7px Fira Code';ctx.fillText('normalizada',x+lw/2,y+lh+24);}
     ctx.textAlign='left';}
   // Info
   let iy=170;ctx.fillStyle='rgba(6,6,12,.9)';ctx.beginPath();ctx.roundRect(8,iy,734,130,10);ctx.fill();
@@ -802,27 +802,27 @@ function draw(){ctx.clearRect(0,0,750,310);
   if(bnOn){
     ctx.fillStyle='#e4e2df';ctx.font='400 9px Fira Code';
     ctx.fillText('All 5 layers: tight, centered distributions. Every layer sees well-behaved inputs (\u03bc\u22480, \u03c3\u22480.5).',20,iy+42);
-    ctx.fillText('Result: stable gradients, fast convergence, can use higher learning rates safely.',20,iy+58);
+    ctx.fillText('Resultado: gradientes estables, convergencia rápida y posibilidad de usar tasas de aprendizaje más altas con seguridad.',20,iy+58);
     ctx.fillStyle='#ffd166';ctx.font='500 9px Fira Code';
     ctx.fillText('x\u0302 = (x\u2212\u03bc_batch)/\u221a(\u03c3\u00b2+\u03b5)  then  y = \u03b3\u00b7x\u0302 + \u03b2  (\u03b3,\u03b2 learnable per layer)',20,iy+78);
     ctx.fillStyle='#7d7a8c';ctx.font='400 8px Fira Code';
     ctx.fillText('Yellow dashed = mean, shaded = \u00b11\u03c3. All histograms are tall & narrow = concentrated around 0.',20,iy+96);
   } else {
     ctx.fillStyle='#e4e2df';ctx.font='400 9px Fira Code';
-    ctx.fillText('Without BN: deeper layers drift (mean shifts) and explode (std grows). Compare Layer 1 vs Layer 5!',20,iy+42);
+    ctx.fillText('Sin BN: las capas profundas derivan (cambia la media) y explotan (crece la desviación). ¡Compara capa 1 vs capa 5!',20,iy+42);
     ctx.fillStyle='#ff6b6b';ctx.font='600 9px Fira Code';
-    ctx.fillText('Layer 1: \u03c3\u22481 (narrow, centered)    vs    Layer 5: \u03c3\u22483+ (wide, shifted) \u2192 UNSTABLE training!',20,iy+58);
+    ctx.fillText('Capa 1: \u03c3\u22481 (narrow, centered)    vs    Capa 5: \u03c3\u22483+ (wide, shifted) \u2192 UNSTABLE training!',20,iy+58);
     ctx.fillStyle='#e4e2df';ctx.font='400 9px Fira Code';
-    ctx.fillText('This is "internal covariate shift": each layer sees wildly different input distributions every update.',20,iy+78);
+    ctx.fillText('Esto es “internal covariate shift”: cada capa ve distribuciones de entrada muy distintas en cada actualización.',20,iy+78);
     ctx.fillStyle='#7d7a8c';ctx.font='400 8px Fira Code';
-    ctx.fillText('Histograms use the SAME x-axis range \u2192 you can see Layer 5 spread much wider than Layer 1.',20,iy+96);
+    ctx.fillText('Histograms use the SAME x-axis range \u2192 you can see Capa 5 spread much wider than Capa 1.',20,iy+96);
   }
   ctx.fillStyle='#7d7a8c';ctx.font='400 8px Fira Code';
-  ctx.fillText('Used in nearly every modern deep network. Adapted as LayerNorm (across features) in Transformers.',20,iy+116);}
+  ctx.fillText('Se usa en casi todas las redes profundas modernas. Se adaptó como LayerNorm (a través de características) en Transformers.',20,iy+116);}
 const ctrl=addControls(el);
 const tog=document.createElement('button');tog.className='btn active';tog.textContent='\u2705 BN ON';
 tog.onclick=()=>{bnOn=!bnOn;tog.textContent=bnOn?'\u2705 BN ON':'\u274c BN OFF';tog.classList.toggle('active');draw();};
-const rs2=document.createElement('button');rs2.className='btn';rs2.textContent='\ud83c\udfb2 Resample';rs2.onclick=()=>{generateRaw();draw();};
+const rs2=document.createElement('button');rs2.className='btn';rs2.textContent='🎲 Remuestrear';rs2.onclick=()=>{generateRaw();draw();};
 ctrl.appendChild(tog);ctrl.appendChild(rs2);draw()})();
 
 </script></body></html>
