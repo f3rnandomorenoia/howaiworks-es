@@ -1,31 +1,31 @@
-# Brand Guidelines (Name, Logo, Visual Identity)
+# Guía de marca (nombre, logo e identidad visual)
 
-The project name, logo, and associated branding are **not** granted under the open-source/content licenses unless explicitly stated.
+El nombre del proyecto, el logo y el *branding* asociado **no** se conceden bajo las licencias de código abierto / contenido salvo que se indique explícitamente.
 
-These guidelines exist to (1) prevent user confusion, and (2) protect the integrity and reputation of the official project.
+Estas directrices existen para (1) evitar confusión en los usuarios y (2) proteger la integridad y la reputación del proyecto oficial.
 
-## Allowed
+## Permitido
 
-- Forking and modifying the **code** and **content** under their respective licenses.
-- Honest attribution such as “Based on the original project by <Author> (link to the original repository).”
-- Referring to the project name in text (e.g., in documentation) when it is clear you are **not** the official project.
+- Hacer *fork* y modificar el **código** y el **contenido** bajo sus licencias respectivas.
+- Atribución honesta del tipo: «Basado en el proyecto original de <Autor> (enlace al repositorio original)».
+- Referirse al nombre del proyecto en texto (por ejemplo, en documentación) cuando quede claro que **no** eres el proyecto oficial.
 
-## Required for public forks
+## Obligatorio para forks públicos
 
-If you publish a public fork (website, repo, package, SaaS, app store listing, etc.) you must:
+Si publicas un *fork* público (web, repositorio, paquete, SaaS, app, listado en app store, etc.), debes:
 
-1) **Rename** the project to avoid confusion with the official project, and  
-2) **Remove or replace** the official logo/visual identity, and  
-3) **Add a clear disclaimer** such as:  
-   “This is an independent fork. It is not affiliated with or endorsed by the original author or Florida State University.”
+1) **Renombrar** el proyecto para evitar confusiones con el proyecto oficial, y
+2) **Eliminar o reemplazar** el logo/identidad visual oficial, y
+3) **Añadir un aviso (disclaimer) claro**, por ejemplo:
+   «Este es un fork independiente. No está afiliado, patrocinado ni avalado por el autor original ni por Florida State University.»
 
-## Not Allowed (without written permission)
+## No permitido (sin permiso por escrito)
 
-- Using the project name or logo in a way that implies official status or endorsement.
-- Marketing a fork as the official version.
-- Using “official”, “certified”, “approved”, or similar language implying endorsement.
-- Reusing the logo or visual identity as-is for a public fork.
+- Usar el nombre del proyecto o el logo de forma que implique estatus oficial o respaldo.
+- Comercializar un *fork* como si fuese la versión oficial.
+- Usar «oficial», «certificado», «aprobado» o lenguaje similar que implique aval.
+- Reutilizar el logo o la identidad visual tal cual en un *fork* público.
 
-## Recommended attribution
+## Atribución recomendada
 
-“Based on the original project by the original author (link to the original repository).”
+«Basado en el proyecto original del autor original (enlace al repositorio original)».
