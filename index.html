@@ -36,6 +36,12 @@
   .c8::before { background: var(--a8); } .c8 .era-num { color: var(--a8); }
 
   .toc-card .count { font-family: var(--mono); font-size: .55rem; color: var(--text3); margin-top: .5rem; position: relative; z-index: 1; }
+
+  /* Fork branding: keep neutral and avoid the original project's trademark/logo */
+  .fork-brand { display:flex; flex-direction:column; align-items:center; gap:.6rem; margin-bottom:1.2rem; }
+  .fork-brand img { width:42px; height:42px; border-radius:10px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+  .disclaimer { margin-top:.85rem; font-size:.75rem; color:var(--text3); max-width: 56ch; }
+  .disclaimer a { color: var(--a2); border-bottom: 1px dashed var(--a2); }
 </style>
 </head>
 <body>
@@ -45,24 +51,18 @@
   <div class="hero-bg"></div>
   <div class="hero-content">
 
-    <!-- Logo + Badge: stacked centered -->
-    <div style="display:flex;flex-direction:column;align-items:center;gap:.6rem;margin-bottom:1.2rem">
-      <div class="ew-logo" style="margin-bottom:0">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="42" height="42" fill="none">
-          <circle cx="24" cy="24" r="22.5" stroke="#6b6b7a" stroke-width="1" opacity=".35"/>
-          <circle cx="24" cy="24" r="19" stroke="#8a8a9a" stroke-width=".6" opacity=".2"/>
-          <path d="M12 14 h8 M12 14 v20 M12 24 h6 M12 34 h8" stroke="#9a9aaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M25 14 l3 20 4-13 4 13 3-20" stroke="#b0b0be" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="24" cy="6" r="1.2" fill="#8a8a9a" opacity=".4"/>
-        </svg>
-        <span class="ew-text">Encyclopedia World</span>
-      </div>
+    <!-- Fork branding (logo is original work by the fork owner) -->
+    <div class="fork-brand">
+      <img src="assets/logo.jpg" alt="Logo">
       <div class="badge" style="margin-bottom:0"><span></span>Interactive · 1805 → 2025</div>
     </div>
-    <h1>How AI Works</h1>
-    <p class="sub">A hands-on journey through 50 landmark models that shaped artificial intelligence — from Gauss to GPT. Every model has an interactive demo you can touch. See <a href="https://github.com/EncyclopediaWorld/howaiworks" target="_blank" rel="noopener" style="color:var(--a2);border-bottom:1px dashed var(--a2)">GitHub Repository</a>.</p>
 
-    <!-- Author credit -->
+    <h1>How AI Works</h1>
+    <p class="sub">A hands-on journey through 50 landmark models that shaped artificial intelligence — from Gauss to GPT. Every model has an interactive demo you can touch. See the <a href="https://github.com/EncyclopediaWorld/howaiworks" target="_blank" rel="noopener">original GitHub repository</a>.</p>
+
+    <p class="disclaimer"><strong>Unofficial fork:</strong> Spanish translation in progress. Not affiliated with, sponsored by, or endorsed by the original author or any organization. See <a href="README.md">README</a> for details.</p>
+
+    <!-- Author credit (original work) -->
     <div class="author-line">
       <a href="https://yushundong.github.io" target="_blank" rel="noopener">Dr. Yushun Dong · Florida State University</a>
     </div>
@@ -155,7 +155,7 @@
   </div>
 </nav>
 
-<footer>Built with care to explain AI · Every demo is interactive — click, drag, and play!<br><span style="font-size:.55rem;color:#4a475a;margin-top:.4rem;display:inline-block">Code licensed under <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" style="color:#4a475a;border-bottom:1px dashed #4a475a">Apache 2.0</a> · Written content under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" style="color:#4a475a;border-bottom:1px dashed #4a475a">CC BY 4.0</a> · See LICENSE, CONTENT_LICENSE, and BRAND_GUIDELINES for full details.</span></footer>
+<footer>Built with care to explain AI · Every demo is interactive — click, drag, and play!<br><span style="font-size:.55rem;color:#4a475a;margin-top:.4rem;display:inline-block">Code licensed under <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" style="color:#4a475a;border-bottom:1px dashed #4a475a">Apache 2.0</a> · Written content under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" style="color:#4a475a;border-bottom:1px dashed #4a475a">CC BY‑NC 4.0</a> · See LICENSE, CONTENT_LICENSE.md, and BRAND_GUIDELINES.md for full details.</span></footer>
 
 <script src="shared.js"></script>
 <script>initParticles('particles');</script>
