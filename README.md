@@ -1,4 +1,4 @@
-# How AI Works — An Interactive Visual History of AI/ML
+# How AI Works — Historia visual e interactiva de la IA/ML (traducción al español)
 
 [![HTML5](https://img.shields.io/badge/HTML5-Canvas-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -10,96 +10,97 @@
 [![Demos](https://img.shields.io/badge/Interactive_Demos-50-fb923c)](section1.html)
 ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=EncyclopediaWorld.howaiworks)
 
-> **50 models · 1805–2024 · 8 sections · Interactive canvas demos**
+> **50 modelos · 1805–2024 · 8 secciones · demos interactivas en canvas**
 >
-> From Gauss's Least Squares to Sora's video generation — every milestone explained with hands-on visualizations.
+> De los Mínimos Cuadrados de Gauss a la generación de vídeo de Sora — cada hito explicado con visualizaciones “hands-on”.
 
-🔗 **Author:** Dr. Yushun Dong @ Florida State University
+**Aviso (fork público):** este repositorio es un *fork* no oficial con traducción al español. **No está afiliado, patrocinado ni avalado** por EncyclopediaWorld ni por el autor original. (Ver `BRAND_GUIDELINES.md`).
 
-🏷️ **License:** Code under Apache 2.0 · Content under CC BY 4.0
+🔗 **Autor (obra original):** Dr. Yushun Dong (Florida State University)
 
----
-
-## Overview
-
-**How AI Works** is a self-contained, static website that walks through the entire history of artificial intelligence and machine learning through **50 interactive model demos** spanning over 200 years. Every model includes:
-
-- 📄 **Paper link** — direct link to the original publication
-- 🔗 **Model lineage** — cross-references showing how each model evolves from and leads to others
-- 🎮 **Interactive demo** — canvas-based visualization you can click, hover, and explore
-- 📐 **Key formula** — the core equation or architecture in one line
-
-No frameworks. No build step. No dependencies. Just open `index.html` in a browser.
+🏷️ **Licencia:** código bajo Apache 2.0 · contenido bajo CC (ver detalle en la sección “Licencia”)
 
 ---
 
-## Star History
+## Visión general
+
+**How AI Works** es un sitio web estático y autocontenido que recorre la historia completa de la inteligencia artificial y el *machine learning* mediante **50 demos interactivas de modelos** que abarcan más de 200 años. Cada modelo incluye:
+
+- 📄 **Enlace al paper** — enlace directo a la publicación original
+- 🔗 **Linaje del modelo** — referencias cruzadas que muestran cómo cada modelo evoluciona a partir de otros y conduce a los siguientes
+- 🎮 **Demo interactiva** — visualización en canvas con la que puedes hacer clic, pasar el ratón y explorar
+- 📐 **Fórmula clave** — la ecuación (o arquitectura) central en una sola línea
+
+Sin frameworks. Sin paso de *build*. Sin dependencias. Solo abre `index.html` en un navegador.
+
+---
+
+## Historial de estrellas
 
 [![Star History Chart](https://api.star-history.com/svg?repos=EncyclopediaWorld/howaiworks&type=Date)](https://star-history.com/#EncyclopediaWorld/howaiworks&Date)
 
-
 ---
 
-## Sections & Models
+## Secciones y modelos
 
-### Section I — The Mathematical Roots (1805–1957)
-| Year | Model | ID |
+### Sección I — Raíces matemáticas (1805–1957)
+| Año | Modelo | ID |
 |------|-------|----|
-| 1805 | Linear Regression (Least Squares) | `#model-linreg` |
-| 1812 | Bayes' Theorem | `#model-bayes` |
-| 1847 | Chain Rule of Calculus | `#model-chainrule` |
-| 1906 | Markov Chains | `#model-markov` |
-| 1957 | Perceptron | `#model-perceptron` |
+| 1805 | Regresión lineal (mínimos cuadrados) | `#model-linreg` |
+| 1812 | Teorema de Bayes | `#model-bayes` |
+| 1847 | Regla de la cadena (cálculo) | `#model-chainrule` |
+| 1906 | Cadenas de Markov | `#model-markov` |
+| 1957 | Perceptrón | `#model-perceptron` |
 
-### Section II — Early Learning Machines (1960–1967)
-| Year | Model | ID |
+### Sección II — Primeras máquinas de aprendizaje (1960–1967)
+| Año | Modelo | ID |
 |------|-------|----|
 | 1960 | ADALINE | `#model-adaline` |
-| 1963 | Naive Bayes Classifier | `#model-naivebayes` |
-| 1967 | K-Nearest Neighbors | `#model-knn` |
+| 1963 | Clasificador Naive Bayes | `#model-naivebayes` |
+| 1967 | K vecinos más cercanos (KNN) | `#model-knn` |
 
-### Section III — Pattern Recognition & Trees (1980–1995)
-| Year | Model | ID |
+### Sección III — Reconocimiento de patrones y árboles (1980–1995)
+| Año | Modelo | ID |
 |------|-------|----|
-| 1980 | Neocognitron | `#model-neocognitron` |
-| 1986 | Decision Tree (ID3/C4.5) | `#model-dtree` |
-| 1995 | Random Forest | `#model-randomforest` |
-| 1995 | SVM (Support Vector Machine) | `#model-svm` |
+| 1980 | Neocognitrón | `#model-neocognitron` |
+| 1986 | Árbol de decisión (ID3/C4.5) | `#model-dtree` |
+| 1995 | Random Forest (bosque aleatorio) | `#model-randomforest` |
+| 1995 | SVM (Support Vector Machine / máquina de vectores de soporte) | `#model-svm` |
 | 1997 | AdaBoost | `#model-adaboost` |
 
-### Section IV — Neural Networks Rise (1986–1997)
-| Year | Model | ID |
+### Sección IV — Auge de las redes neuronales (1986–1997)
+| Año | Modelo | ID |
 |------|-------|----|
-| 1986 | Backpropagation | `#model-backprop` |
-| 1985 | Boltzmann Machine | `#model-boltzmann` |
+| 1986 | Retropropagación (backpropagation) | `#model-backprop` |
+| 1985 | Máquina de Boltzmann | `#model-boltzmann` |
 | 1989 | CNN / LeNet | `#model-cnn` |
-| 1990 | RNN (Recurrent Neural Network) | `#model-rnn` |
+| 1990 | RNN (red neuronal recurrente) | `#model-rnn` |
 | 1997 | LSTM | `#model-lstm` |
-| 1998 | GMM + EM Algorithm | `#model-gmm` |
+| 1998 | GMM + algoritmo EM | `#model-gmm` |
 
-### Section V — Deep Foundations (2006–2011)
-| Year | Model | ID |
+### Sección V — Fundamentos del *deep learning* (2006–2011)
+| Año | Modelo | ID |
 |------|-------|----|
-| 2006 | Deep Belief Network | `#model-dbn` |
-| 2006 | Sparse Autoencoder | `#model-sparse-ae` |
-| 2008 | Denoising Autoencoder | `#model-dae` |
-| 2001 | GBDT (Gradient Boosted Trees) | `#model-gbdt` |
+| 2006 | Deep Belief Network (DBN) | `#model-dbn` |
+| 2006 | Autoencoder disperso (sparse autoencoder) | `#model-sparse-ae` |
+| 2008 | Autoencoder con *denoising* | `#model-dae` |
+| 2001 | GBDT (árboles potenciados por gradiente) | `#model-gbdt` |
 | 2003 | NNLM (Neural Language Model) | `#model-nnlm` |
 
-### Section VI — The Deep Learning Explosion (2012–2015)
-| Year | Model | ID |
+### Sección VI — Explosión del aprendizaje profundo (2012–2015)
+| Año | Modelo | ID |
 |------|-------|----|
 | 2012 | AlexNet | `#model-alexnet` |
 | 2014 | Dropout | `#model-dropout` |
 | 2013 | Word2Vec | `#model-word2vec` |
-| 2013 | VAE (Variational Autoencoder) | `#model-vae` |
-| 2014 | GAN (Generative Adversarial Network) | `#model-gan` |
-| 2014 | Seq2Seq + Attention | `#model-seq2seq` |
-| 2015 | ResNet (Residual Network) | `#model-resnet` |
-| 2015 | Batch Normalization | `#model-batchnorm` |
+| 2013 | VAE (autoencoder variacional) | `#model-vae` |
+| 2014 | GAN (Generative Adversarial Network / red generativa adversaria) | `#model-gan` |
+| 2014 | Seq2Seq + atención | `#model-seq2seq` |
+| 2015 | ResNet (red residual) | `#model-resnet` |
+| 2015 | Normalización por lotes (batch normalization) | `#model-batchnorm` |
 
-### Section VII — The Transformer Revolution (2016–2019)
-| Year | Model | ID |
+### Sección VII — La revolución Transformer (2016–2019)
+| Año | Modelo | ID |
 |------|-------|----|
 | 2016 | XGBoost | `#model-xgboost` |
 | 2016 | WaveNet | `#model-wavenet` |
@@ -111,24 +112,24 @@ No frameworks. No build step. No dependencies. Just open `index.html` in a brows
 | 2019 | GPT-2 | `#model-gpt2` |
 | 2019 | T5 | `#model-t5` |
 
-### Section VIII — Foundation Models & The AGI Era (2020–2024)
-| Year | Model | ID |
+### Sección VIII — Modelos fundacionales y era AGI (2020–2024)
+| Año | Modelo | ID |
 |------|-------|----|
 | 2020 | GPT-3 | `#model-gpt3` |
 | 2020 | ViT (Vision Transformer) | `#model-vit` |
 | 2021 | CLIP | `#model-clip` |
-| 2020 | Diffusion Models | `#model-diffusion` |
+| 2020 | Modelos de difusión | `#model-diffusion` |
 | 2022 | ChatGPT (RLHF) | `#model-chatgpt` |
 | 2023 | LLaMA | `#model-llama` |
 | 2023 | GPT-4 | `#model-gpt4` |
-| 2024 | Claude (Constitutional AI) | `#model-claude` |
+| 2024 | Claude (IA constitucional) | `#model-claude` |
 | 2024 | Sora | `#model-sora` |
 
 ---
 
-## Model Lineage Map
+## Mapa de linaje de modelos
 
-The site features cross-section hyperlinks showing how models evolved:
+El sitio incluye hiperenlaces cruzados entre secciones que muestran cómo evolucionaron los modelos:
 
 ```
 Least Squares ─→ ADALINE ─→ Backpropagation ─→ CNN/LeNet ─→ AlexNet ─→ ResNet ─→ ViT
@@ -156,87 +157,93 @@ Transformer ─→ ViT ─→ CLIP ─→ Stable Diffusion / DALL-E
 GAN ─→ StyleGAN ─→ (surpassed by) Diffusion Models ─→ Sora
 ```
 
+> Nota: en esta traducción se mantienen muchos nombres de modelos en inglés por ser la convención más extendida; cuando ayuda, se añade la traducción o aclaración entre paréntesis.
+
 ---
 
-## Technical Details
+## Detalles técnicos
 
-### Architecture
-- **Pure static site** — HTML + CSS + JS, no build tools
-- **Canvas demos** — all visualizations use HTML5 `<canvas>` API
-- **Shared utilities** — `shared.js` provides `createCanvas()`, `addControls()`, `addHint()`, math helpers
-- **Dark theme** — `styles.css` with CSS custom properties for section-specific accent colors
-- **Mobile responsive** — all canvases scale via `width: 100%` CSS
+### Arquitectura
 
-### File Structure
+- **Sitio estático puro** — HTML + CSS + JS, sin herramientas de *build*
+- **Demos en canvas** — todas las visualizaciones usan la API HTML5 `<canvas>`
+- **Utilidades compartidas** — `shared.js` aporta `createCanvas()`, `addControls()`, `addHint()` y utilidades matemáticas
+- **Tema oscuro** — `styles.css` con propiedades CSS para colores de acento por sección
+- **Responsive móvil** — todos los canvas escalan vía CSS (`width: 100%`)
+
+### Estructura de archivos
+
 ```
-site-en/
-├── index.html          (9 KB)   Landing page with 8 section cards
-├── section1.html       (23 KB)  5 models: Least Squares → Perceptron
-├── section2.html       (18 KB)  3 models: ADALINE → KNN
-├── section3.html       (29 KB)  5 models: Neocognitron → AdaBoost
-├── section4.html       (33 KB)  6 models: Backprop → GMM+EM
-├── section5.html       (26 KB)  5 models: DBN → NNLM
-├── section6.html       (36 KB)  8 models: AlexNet → BatchNorm
-├── section7.html       (43 KB)  9 models: XGBoost → T5
-├── section8.html       (43 KB)  9 models: GPT-3 → Sora
-├── styles.css          (15 KB)  Dark theme, responsive, all component styles
-├── shared.js           (3 KB)   Canvas helpers, math utilities
-└── README.md           (this file)
+.
+├── index.html
+├── section1.html
+├── section2.html
+├── section3.html
+├── section4.html
+├── section5.html
+├── section6.html
+├── section7.html
+├── section8.html
+├── styles.css
+├── shared.js
+└── README.md
 ```
 
-**Total size: ~280 KB** (no images, no external dependencies)
+**Tamaño total: ~280 KB** (sin imágenes, sin dependencias externas)
 
-### CSS Custom Properties (Accent Colors)
+### Propiedades CSS (colores de acento)
+
 ```css
---a1: #38bdf8   /* Section I   — blue      */
---a2: #ffd166   /* Section II  — gold      */
---a3: #4ecdc4   /* Section III — teal      */
---a4: #a78bfa   /* Section IV  — purple    */
---a5: #ff6b6b   /* Section V   — red       */
---a6: #fb923c   /* Section VI  — orange    */
---a7: #f472b6   /* Section VII — pink      */
---a8: #34d399   /* Section VIII— green     */
+--a1: #38bdf8   /* Sección I   — azul     */
+--a2: #ffd166   /* Sección II  — dorado   */
+--a3: #4ecdc4   /* Sección III — turquesa */
+--a4: #a78bfa   /* Sección IV  — púrpura  */
+--a5: #ff6b6b   /* Sección V   — rojo     */
+--a6: #fb923c   /* Sección VI  — naranja  */
+--a7: #f472b6   /* Sección VII — rosa     */
+--a8: #34d399   /* Sección VIII— verde    */
 ```
 
-### Special CSS Classes
-- `.paper-link` — styled button for academic paper links (📄 icon)
-- `.model-lineage` — italicized cross-reference text with colored links
-- `.author-line` — subtle author/affiliation credit
-- `.ew-logo` — embedded SVG logo
-- `.mc-demo` — canvas demo container with responsive scaling
+### Clases CSS especiales
+
+- `.paper-link` — botón con estilo para enlaces a papers (icono 📄)
+- `.model-lineage` — texto en cursiva para referencias cruzadas con enlaces coloreados
+- `.author-line` — crédito sutil de autor/afiliación
+- `.ew-logo` — logo SVG embebido
+- `.mc-demo` — contenedor del canvas con escalado responsive
 
 ---
 
-## How to Use
+## Cómo usarlo
 
-1. **Open locally:** Just double-click `index.html` — works offline
-2. **Deploy:** Upload the entire folder to any static host (GitHub Pages, Netlify, Vercel, S3)
-3. **Navigate:** Click section cards on home page, or use the top nav bar (I–VIII)
-4. **Interact:** Every demo has hints, buttons, and mouse/click interactions
-5. **Deep link:** Use `sectionN.html#model-name` to link directly to any model
-
----
-
-## License
-
-This project uses a dual-license structure:
-
-- **Code** (JavaScript, CSS, and code embedded in HTML) is licensed under the **Apache License 2.0**. See `LICENSE`.
-- **Content** (explanatory text, narrative descriptions, educational materials) is licensed under **CC BY‑NC 4.0** by default. See `CONTENT_LICENSE.md`.
-
-**Brand / trademark:** the project name, logo, and visual identity are **not** covered by the above licenses. Public forks must rename and add a clear “not affiliated / not endorsed” disclaimer. See `BRAND_GUIDELINES.md`.
-
-**Commercial use:** if you need commercial rights for the content or want an enterprise deployment/partnership, see `COMMERCIAL.md`.
+1. **Abrir en local:** haz doble clic en `index.html` — funciona *offline*
+2. **Desplegar:** sube la carpeta completa a cualquier hosting estático (GitHub Pages, Netlify, Vercel, S3)
+3. **Navegar:** haz clic en las tarjetas de sección en la home, o usa la barra superior (I–VIII)
+4. **Interactuar:** cada demo incluye pistas, botones e interacción con ratón/clic
+5. **Enlace directo:** usa `sectionN.html#model-name` para enlazar directamente a un modelo
 
 ---
 
-## Credits
+## Licencia
 
-- **Author:** Dr. Yushun Dong, Florida State University
-- **Design:** Dark theme with per-section accent colors, inspired by academic visualization
-- **Demos:** All 50 interactive visualizations built with vanilla Canvas API
-- **Papers:** Every model links to its original publication (arXiv, JMLR, NeurIPS, etc.)
+Este proyecto usa una estructura de doble licencia:
+
+- **Código** (JavaScript, CSS y código embebido en HTML) bajo **Apache License 2.0**. Ver `LICENSE`.
+- **Contenido** (texto explicativo, narrativa y material educativo) bajo **CC BY‑NC 4.0** por defecto. Ver `CONTENT_LICENSE.md`.
+
+**Marca / trademark:** el nombre del proyecto, el logo y la identidad visual **no** están cubiertos por las licencias anteriores. Los forks públicos deben renombrar y añadir un aviso claro de “no afiliado / no avalado”. Ver `BRAND_GUIDELINES.md`.
+
+**Uso comercial:** si necesitas derechos comerciales para el contenido o quieres un despliegue/colaboración empresarial, ver `COMMERCIAL.md`.
 
 ---
 
-*Built as an educational resource to make the history and mechanics of AI accessible to everyone.*
+## Créditos
+
+- **Autor:** Dr. Yushun Dong, Florida State University
+- **Diseño:** tema oscuro con colores de acento por sección, inspirado en visualización académica
+- **Demos:** 50 visualizaciones interactivas con Canvas API “vanilla”
+- **Papers:** cada modelo enlaza su publicación original (arXiv, JMLR, NeurIPS, etc.)
+
+---
+
+*Construido como recurso educativo para hacer accesible a todo el mundo la historia y la mecánica de la IA.*
