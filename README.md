@@ -16,6 +16,8 @@
 
 **Aviso (fork público):** este repositorio es un *fork* no oficial con traducción al español. **No está afiliado, patrocinado ni avalado** por EncyclopediaWorld ni por el autor original. (Ver `BRAND_GUIDELINES.md`).
 
+🔗 **Versión oficial original:** https://github.com/EncyclopediaWorld/howaiworks
+
 🔗 **Autor (obra original):** Dr. Yushun Dong (Florida State University)
 
 🏷️ **Licencia:** código bajo Apache 2.0 · contenido bajo CC (ver detalle en la sección “Licencia”)
