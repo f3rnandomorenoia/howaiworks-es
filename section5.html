@@ -1,48 +1,48 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Section V — The Eve of Deep Learning · How AI Works</title>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Sección V — La víspera del deep learning · How AI Works</title>
 <link rel="stylesheet" href="styles.css">
 </head><body>
 <div class="progress-bar" style="background:linear-gradient(90deg,var(--a4),var(--a5))"></div>
 <button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <nav class="topnav"><a href="index.html" class="logo">How AI Works</a><div class="nav-links"><a href="section1.html">I</a><a href="section2.html">II</a><a href="section3.html">III</a><a href="section4.html">IV</a><a href="section5.html" class="active">V</a><a href="section6.html">VI</a><a href="section7.html">VII</a><a href="section8.html">VIII</a></div></nav>
-<div class="section-hero"><div class="era-label" style="color:var(--a4)">Section V · 2000s</div>
-<h1>The Eve of Deep Learning</h1><p>Deep belief nets, autoencoders, gradient boosting, and neural language models set the stage for the deep learning revolution.</p>
-<div class="nav-arrows"><a href="section4.html">&larr; Section IV</a><a href="section6.html">Section VI &rarr;</a></div></div>
+<div class="section-hero"><div class="era-label" style="color:var(--a4)">Sección V · 2000s</div>
+<h1>La víspera del deep learning</h1><p>Deep belief nets, autoencoders, gradient boosting y modelos de lenguaje neuronales preparan el terreno para la revolución del deep learning.</p>
+<div class="nav-arrows"><a href="section4.html">&larr; Sección IV</a><a href="section6.html">Sección VI &rarr;</a></div></div>
 <div class="models-container">
 
 <!-- ======= DBN ======= -->
 <div class="model-card" id="model-dbn"><div class="mc-head"><span class="mc-year" style="color:var(--a4)">2006</span><div class="mc-info">
 <h3>Deep Belief Network (DBN) <a href="https://doi.org/10.1162/neco.2006.18.7.1527" target="_blank" class="paper-link">Paper</a></h3>
-<p>Hinton's breakthrough — train deep networks by stacking Restricted Boltzmann Machines one layer at a time. Each layer learns increasingly abstract features.</p>
-<div class="model-lineage">Stacks <a href="section3.html#model-boltzmann">Boltzmann Machine</a> layers with greedy pretraining; this first successful deep network paves the way for <a href="section6.html#model-alexnet">AlexNet</a> and all modern deep learning.</div>
+<p>El avance de Hinton — entrenar redes profundas apilando Restricted Boltzmann Machines (RBM) capa a capa. Cada capa aprende rasgos cada vez más abstractos.</p>
+<div class="model-lineage">Apila capas de <a href="section3.html#model-boltzmann">máquinas de Boltzmann</a> con preentrenamiento voraz; esta primera red profunda exitosa abre el camino a <a href="section6.html#model-alexnet">AlexNet</a> y al deep learning moderno.</div>
 </div></div>
-<div class="mc-formula" style="color:var(--a4)">Layer 1: learn edges → Layer 2: learn shapes → Layer 3: learn objects (greedy pretraining)</div>
+<div class="mc-formula" style="color:var(--a4)">Capa 1: aprende bordes → Capa 2: aprende formas → Capa 3: aprende objetos (preentrenamiento voraz)</div>
 <div class="mc-demo" id="demo-dbn"></div></div>
 
 <!-- ======= SPARSE AUTOENCODER ======= -->
 <div class="model-card" id="model-sparse-ae"><div class="mc-head"><span class="mc-year" style="color:var(--a4)">2006</span><div class="mc-info">
-<h3>Sparse Autoencoder <a href="https://arxiv.org/abs/1312.5663" target="_blank" class="paper-link">Paper</a></h3>
-<p>Compress data through a bottleneck, then reconstruct it. Sparsity constraint ensures only a few neurons activate — forcing efficient, meaningful features.</p>
-<div class="model-lineage">Learns compressed representations like <a href="section5.html#model-dbn">DBN</a> but via reconstruction loss; its encode-decode structure directly leads to <a href="section6.html#model-vae">VAE</a> (adds probabilistic sampling).</div>
+<h3>Autoencoder disperso <a href="https://arxiv.org/abs/1312.5663" target="_blank" class="paper-link">Paper</a></h3>
+<p>Comprime los datos a través de un cuello de botella y luego los reconstruye. La restricción de dispersidad hace que solo se activen unas pocas neuronas, forzando rasgos eficientes y con significado.</p>
+<div class="model-lineage">Aprende representaciones comprimidas como <a href="section5.html#model-dbn">DBN</a>, pero mediante pérdida de reconstrucción; su estructura codificador-decodificador conduce directamente a <a href="section6.html#model-vae">VAE</a> (añade muestreo probabilístico).</div>
 </div></div>
-<div class="mc-formula" style="color:var(--a4)">Input → Encoder (compress) → Bottleneck (sparse code) → Decoder (reconstruct) → Output ≈ Input</div>
+<div class="mc-formula" style="color:var(--a4)">Entrada → Codificador (comprime) → Cuello de botella (código disperso) → Decodificador (reconstruye) → Salida ≈ Entrada</div>
 <div class="mc-demo" id="demo-sae"></div></div>
 
 <!-- ======= DENOISING AUTOENCODER ======= -->
 <div class="model-card" id="model-dae"><div class="mc-head"><span class="mc-year" style="color:var(--a4)">2008</span><div class="mc-info">
-<h3>Denoising Autoencoder <a href="https://doi.org/10.1145/1390156.1390294" target="_blank" class="paper-link">Paper</a></h3>
-<p>Corrupt the input with noise, then train the network to reconstruct the CLEAN original. Forces robust features that capture true data structure.</p>
-<div class="model-lineage">Extends <a href="section5.html#model-sparse-ae">Sparse Autoencoder</a> with noise-based regularization; the "denoise to learn" principle directly inspires <a href="section8.html#model-diffusion">Diffusion Models</a>.</div>
+<h3>Autoencoder con denoising <a href="https://doi.org/10.1145/1390156.1390294" target="_blank" class="paper-link">Paper</a></h3>
+<p>Corrompe la entrada con ruido y luego entrena la red para reconstruir el original LIMPIO. Fuerza rasgos robustos que capturan la estructura real de los datos.</p>
+<div class="model-lineage">Extends <a href="section5.html#model-sparse-ae">Autoencoder disperso</a> with noise-based regularization; the "denoise to learn" principle directly inspires <a href="section8.html#model-diffusion">Diffusion Models</a>.</div>
 </div></div>
-<div class="mc-formula" style="color:var(--a4)">Clean x → Add noise → x̃ → Encoder → Decoder → x̂ ≈ x (not x̃!) — learn to denoise</div>
+<div class="mc-formula" style="color:var(--a4)">x limpio → añadir ruido → x̃ → codificador → decodificador → x̂ ≈ x (¡no x̃!) — aprender a eliminar ruido</div>
 <div class="mc-demo" id="demo-dae"></div></div>
 
 <!-- ======= GBDT ======= -->
 <div class="model-card" id="model-gbdt"><div class="mc-head"><span class="mc-year" style="color:var(--a4)">2001</span><div class="mc-info">
 <h3>GBDT (Gradient Boosted Decision Trees) <a href="https://doi.org/10.1214/aos/1013203451" target="_blank" class="paper-link">Paper</a></h3>
-<p>Friedman's gradient boosting — each new tree fits the RESIDUAL errors of the previous ensemble. Sequentially reduces loss by correcting current mistakes.</p>
-<div class="model-lineage">Replaces <a href="section4.html#model-adaboost">AdaBoost</a>'s sample reweighting with gradient-based residual fitting on <a href="section3.html#model-dtree">Decision Trees</a>; optimized into <a href="section7.html#model-xgboost">XGBoost</a>.</div>
+<p>El gradient boosting de Friedman — cada árbol nuevo ajusta los RESIDUOS (errores) del ensamblado anterior. Reduce la pérdida de forma secuencial corrigiendo los errores actuales.</p>
+<div class="model-lineage">Sustituye la reponderación de muestras de <a href="section4.html#model-adaboost">AdaBoost</a> por el ajuste de residuos basado en gradiente sobre <a href="section3.html#model-dtree">árboles de decisión</a>; optimizado más tarde en <a href="section7.html#model-xgboost">XGBoost</a>.</div>
 </div></div>
 <div class="mc-formula" style="color:var(--a4)">F_m(x) = F_{m-1}(x) + η · h_m(x) where h_m fits the residuals r = y - F_{m-1}(x)</div>
 <div class="mc-demo" id="demo-gbdt"></div></div>
@@ -50,14 +50,14 @@
 <!-- ======= NNLM ======= -->
 <div class="model-card" id="model-nnlm"><div class="mc-head"><span class="mc-year" style="color:var(--a4)">2003</span><div class="mc-info">
 <h3>NNLM (Neural Network Language Model) <a href="https://jmlr.org/papers/v3/bengio03a.html" target="_blank" class="paper-link">Paper</a></h3>
-<p>Bengio's breakthrough — predict the next word using a neural network over word embeddings. Each word gets a learned vector representation.</p>
-<div class="model-lineage">First neural approach to language modeling using <a href="section3.html#model-backprop">Backpropagation</a>; its word embeddings lead to <a href="section6.html#model-word2vec">Word2Vec</a> and its next-word prediction paradigm leads to <a href="section7.html#model-gpt1">GPT</a>.</div>
+<p>El avance de Bengio — predice la siguiente palabra usando una red neuronal sobre *word embeddings*. Cada palabra obtiene una representación vectorial aprendida.</p>
+<div class="model-lineage">Primer enfoque neuronal para modelado del lenguaje usando <a href="section3.html#model-backprop">retropropagación</a>; sus *word embeddings* conducen a <a href="section6.html#model-word2vec">Word2Vec</a> y su paradigma de predicción de siguiente palabra conduce a <a href="section7.html#model-gpt1">GPT</a>.</div>
 </div></div>
 <div class="mc-formula" style="color:var(--a4)">P(wₜ | wₜ₋₁, wₜ₋₂, ...) = softmax(W · tanh(C · [e(wₜ₋₁); e(wₜ₋₂); ...]))</div>
 <div class="mc-demo" id="demo-nnlm"></div></div>
 
 </div>
-<footer><a href="section4.html">&larr; Section IV</a> &middot; <a href="section6.html">Section VI: Deep Learning Explosion &rarr;</a></footer>
+<footer><a href="section4.html">&larr; Sección IV</a> &middot; <a href="section6.html">Sección VI: Explosión del deep learning &rarr;</a></footer>
 <script src="shared.js"></script>
 
 <script>
@@ -103,12 +103,12 @@
 <script>
 // ===== DEEP BELIEF NETWORK =====
 (function(){const el=$('demo-dbn'),[c,ctx]=createCanvas(el,750,360);
-addHint(el,'Press "Train Layer" to pretrain each RBM layer bottom-up. Watch features become progressively more abstract!');
+addHint(el,'Pulsa “Entrenar capa” para preentrenar cada capa RBM de abajo arriba. Observa cómo los rasgos se vuelven progresivamente más abstractos.');
 const layers=[
-{name:'Input',n:8,neurons:[],desc:'Raw pixels'},
-{name:'Layer 1 (RBM-1)',n:6,neurons:[],trained:false,desc:'Edges & strokes'},
-{name:'Layer 2 (RBM-2)',n:4,neurons:[],trained:false,desc:'Shapes & parts'},
-{name:'Layer 3 (RBM-3)',n:3,neurons:[],trained:false,desc:'Objects & concepts'}];
+{name:'Entrada',n:8,neurons:[],desc:'Píxeles brutos'},
+{name:'Capa 1 (RBM-1)',n:6,neurons:[],trained:false,desc:'Bordes y trazos'},
+{name:'Capa 2 (RBM-2)',n:4,neurons:[],trained:false,desc:'Formas y partes'},
+{name:'Capa 3 (RBM-3)',n:3,neurons:[],trained:false,desc:'Objetos y conceptos'}];
 let currentLayer=0,trainAnim=0;
 layers.forEach(l=>{l.neurons=Array(l.n).fill(0).map(()=>rand(0,.3))});
 function trainCurrentLayer(){if(currentLayer>=layers.length-1)return;
@@ -137,29 +137,29 @@ ctx.strokeStyle=isTrained?'#a78bfa66':'#333';ctx.lineWidth=1;ctx.stroke();ctx.re
 ctx.fillStyle=v>.5?'#e4e2df':'#4a475a';ctx.font='500 8px Fira Code';ctx.textAlign='center';
 ctx.fillText(v.toFixed(2),x+lw/2-7,ny+3);ctx.textAlign='left'});
 if(li<layers.length-1){ctx.fillStyle=isTrained?'#a78bfa44':'#1e1e32';ctx.font='16px sans-serif';ctx.fillText('→',x+lw-12,155)}
-if(isTraining){ctx.fillStyle='#ffd166';ctx.font='600 8px Fira Code';ctx.fillText('⚡ Training RBM...',x+8,y+245)}
-else if(li>0&&L.trained){ctx.fillStyle='#34d399';ctx.font='600 8px Fira Code';ctx.fillText('✓ Pretrained',x+8,y+245)}});
+if(isTraining){ctx.fillStyle='#ffd166';ctx.font='600 8px Fira Code';ctx.fillText('⚡ Entrenando RBM...',x+8,y+245)}
+else if(li>0&&L.trained){ctx.fillStyle='#34d399';ctx.font='600 8px Fira Code';ctx.fillText('✓ Preentrenada',x+8,y+245)}});
 ctx.fillStyle='rgba(6,6,12,.88)';ctx.beginPath();ctx.roundRect(15,290,720,62,10);ctx.fill();
 ctx.fillStyle='#a78bfa';ctx.font='600 10px Fira Code';
-ctx.fillText('Greedy Layer-wise Pretraining (Hinton 2006):',25,308);
+ctx.fillText('Preentrenamiento voraz por capas (Hinton 2006):',25,308);
 ctx.fillStyle='#e4e2df';ctx.font='400 9px Fira Code';
-ctx.fillText('Step '+currentLayer+'/3: '+(currentLayer===0?'Start from raw input. Press "Train Layer" to pretrain Layer 1.':
+ctx.fillText('Paso '+currentLayer+'/3: '+(currentLayer===0?'Empieza desde la entrada bruta. Pulsa “Entrenar capa” para preentrenar la capa 1.':
 currentLayer===1?'Layer 1 learned edge features. Now train Layer 2 on Layer 1\'s output.':
-currentLayer===2?'Layer 2 learned shapes. Train Layer 3 (most abstract).':
-'All layers pretrained! Each learns progressively more abstract features.'),25,326);
+currentLayer===2?'La capa 2 aprendió formas. Entrena la capa 3 (la más abstracta).':
+'¡Todas las capas preentrenadas! Cada una aprende rasgos progresivamente más abstractos.'),25,326);
 ctx.fillStyle='#7d7a8c';ctx.font='400 8px Fira Code';
-ctx.fillText('Key: train one RBM layer at a time (bottom-up). This was the first way to successfully train deep networks!',25,345);
+ctx.fillText('Clave: entrenar una capa RBM cada vez (de abajo arriba). ¡Fue la primera forma de entrenar redes profundas con éxito!',25,345);
 if(trainAnim>0){trainAnim--;requestAnimationFrame(draw)}}
 layers[0].neurons=layers[0].neurons.map(()=>rand(.2,.95));
 const ctrl=addControls(el);
-const tb=document.createElement('button');tb.className='btn';tb.textContent='⚡ Train Next Layer';tb.onclick=trainCurrentLayer;
-const rst=document.createElement('button');rst.className='btn';rst.textContent='↻ Reset';
+const tb=document.createElement('button');tb.className='btn';tb.textContent='⚡ Entrenar siguiente capa';tb.onclick=trainCurrentLayer;
+const rst=document.createElement('button');rst.className='btn';rst.textContent='↻ Reiniciar';
 rst.onclick=()=>{currentLayer=0;layers.forEach((l,i)=>{l.trained=false;l.neurons=Array(l.n).fill(0).map(()=>rand(0,.3))});layers[0].neurons=layers[0].neurons.map(()=>rand(.2,.95));draw()};
 ctrl.appendChild(tb);ctrl.appendChild(rst);draw()})();
 
 // ===== SPARSE AUTOENCODER — Visual Pixel-Grid Demo =====
 (function(){const el=$('demo-sae'),[c,ctx]=createCanvas(el,750,342);
-addHint(el,'Pick a shape, then drag the Sparsity slider. Watch neurons turn OFF and features vanish from the reconstruction!');
+addHint(el,'Elige una forma y mueve el deslizador de dispersidad. Observa cómo se apagan neuronas y los rasgos desaparecen de la reconstrucción.');
 
 const G=6, NH=8, NN=G*G;
 // Each hidden neuron is a spatial feature detector for a specific region of the 6x6 grid.
@@ -187,7 +187,7 @@ const patterns=[
 ];
 let selected=0, sparsity=0.0;
 
-// Encode: dot product with each feature mask
+// Codificar: dot product with each feature mask
 function encode(input){
   const h=new Float32Array(NH);
   for(let j=0;j<NH;j++){let s=0;for(let i=0;i<NN;i++) s+=input[i]*featureMasks[j][i];
@@ -202,7 +202,7 @@ function applySparse(h){
   for(let i=0;i<k;i++){out[idx[i].i]=h[idx[i].i];act.add(idx[i].i);}
   return{sparse:out,act};
 }
-// Decode: weighted sum of feature masks
+// Decodificar: weighted sum of feature masks
 function decode(sp){
   const out=new Float32Array(NN);
   for(let j=0;j<NH;j++){if(sp[j]<0.01)continue;
@@ -251,17 +251,17 @@ function draw(){
 
   // --- INPUT ---
   const inX=16;
-  ctx.fillStyle='#38bdf8';ctx.font='700 11px Fira Code';ctx.fillText('Input (6\u00d76)',inX,flowY+10);
+  ctx.fillStyle='#38bdf8';ctx.font='700 11px Fira Code';ctx.fillText('Entrada (6×6)',inX,flowY+10);
   drawGrid(inX,flowY+16,cellSz,p.grid,'#38bdf8',true);
 
   // --- ARROW 1 ---
   ctx.fillStyle='#4a475a';ctx.font='bold 20px sans-serif';ctx.fillText('\u2192',inX+G*cellSz+8,flowY+G*cellSz/2+20);
-  ctx.fillStyle='#7d7a8c';ctx.font='500 9px Fira Code';ctx.fillText('Encode',inX+G*cellSz+4,flowY+10);
+  ctx.fillStyle='#7d7a8c';ctx.font='500 9px Fira Code';ctx.fillText('Codificar',inX+G*cellSz+4,flowY+10);
 
   // --- BOTTLENECK (centered, with feature mini-grids) ---
   const bnX=185, bnW=350, neuronW=bnW/NH-2;
   ctx.fillStyle='#a78bfa';ctx.font='700 11px Fira Code';
-  ctx.fillText('Sparse Bottleneck  ('+activeCount+'/'+NH+' active)',bnX,flowY+10);
+  ctx.fillText('Cuello de botella disperso  ('+activeCount+'/'+NH+' activas)',bnX,flowY+10);
 
   for(let j=0;j<NH;j++){
     const nx=bnX+j*(neuronW+2), ny=flowY+16;
@@ -307,7 +307,7 @@ function draw(){
   // --- ARROW 2 ---
   const arrX2=bnX+bnW+6;
   ctx.fillStyle='#4a475a';ctx.font='bold 20px sans-serif';ctx.fillText('\u2192',arrX2,flowY+G*cellSz/2+20);
-  ctx.fillStyle='#7d7a8c';ctx.font='500 9px Fira Code';ctx.fillText('Decode',arrX2-2,flowY+10);
+  ctx.fillStyle='#7d7a8c';ctx.font='500 9px Fira Code';ctx.fillText('Decodificar',arrX2-2,flowY+10);
 
   // --- OUTPUT ---
   const outX=arrX2+28;
@@ -320,9 +320,9 @@ function draw(){
   const mse=totalErr/NN;
   const quality=clamp(1-mse*3,0,1);
 
-  // Quality badge next to output grid
+  // Calidad badge next to output grid
   const qY=flowY+16+G*cellSz+6;
-  ctx.fillStyle='#7d7a8c';ctx.font='500 9px Fira Code';ctx.fillText('Quality',outX,qY+10);
+  ctx.fillStyle='#7d7a8c';ctx.font='500 9px Fira Code';ctx.fillText('Calidad',outX,qY+10);
   ctx.fillStyle='#111120';ctx.beginPath();ctx.roundRect(outX+46,qY+2,G*cellSz-46,12,3);ctx.fill();
   const qg=ctx.createLinearGradient(outX+46,0,outX+G*cellSz,0);
   qg.addColorStop(0,'#ff6b6b');qg.addColorStop(.5,'#ffd166');qg.addColorStop(1,'#34d399');
@@ -335,34 +335,34 @@ function draw(){
   ctx.fillStyle='rgba(6,6,12,.92)';ctx.beginPath();ctx.roundRect(12,exY,726,100,8);ctx.fill();
 
   ctx.fillStyle='#ffd166';ctx.font='700 10px Fira Code';
-  ctx.fillText('How It Works:',22,exY+16);
+  ctx.fillText('Cómo funciona:',22,exY+16);
   ctx.fillStyle='#e4e2df';ctx.font='400 9px Fira Code';
   ctx.fillText('Each bottleneck neuron is a "feature detector" \u2014 it looks for a specific pattern (shown in its mini-grid above).',22,exY+32);
-  ctx.fillText('The encoder measures how much each feature is present in the input. The decoder rebuilds using only active features.',22,exY+48);
+  ctx.fillText('El codificador mide cuánto está presente cada rasgo en la entrada. El decodificador reconstruye usando solo rasgos activos.',22,exY+48);
   ctx.fillStyle='#a78bfa';ctx.font='600 9px Fira Code';
-  ctx.fillText('Sparsity constraint forces most neurons OFF \u2192 only the most important features survive!',22,exY+64);
+  ctx.fillText('La restricción de dispersidad fuerza a que la mayoría de neuronas estén APAGADAS → ¡solo sobreviven los rasgos más importantes!',22,exY+64);
   ctx.fillStyle='#7d7a8c';ctx.font='400 9px Fira Code';
-  ctx.fillText('Try it: slide Sparsity right \u2192 watch features disappear one by one \u2192 reconstruction degrades gracefully.',22,exY+80);
+  ctx.fillText('Pruébalo: mueve “Dispersidad” a la derecha → verás cómo desaparecen rasgos uno a uno → la reconstrucción se degrada de forma gradual.',22,exY+80);
   ctx.fillText('Active: '+activeCount+'/'+NH+' | MSE: '+mse.toFixed(4)+' | Compression: 36 pixels \u2192 '+activeCount+' features ('+(activeCount/NN*100).toFixed(0)+'%)',22,exY+96);
 }
 
 c.onclick=e=>{const r=c.getBoundingClientRect(),mx=(e.clientX-r.left)*750/r.width,my=(e.clientY-r.top)*342/r.height;
   patterns.forEach((pp,i)=>{const bw=80,x=14+i*(bw+6),y=4;if(mx>=x&&mx<=x+bw&&my>=y&&my<=y+56){selected=i;draw();}});};
 const ctrl=addControls(el);
-const slbl=document.createElement('label');slbl.textContent='Sparsity';slbl.style.cssText='color:#a78bfa;font:600 10px Fira Code;margin-right:4px';
+const slbl=document.createElement('label');slbl.textContent='Dispersidad';slbl.style.cssText='color:#a78bfa;font:600 10px Fira Code;margin-right:4px';
 const slider=document.createElement('input');slider.type='range';slider.min='0';slider.max='88';slider.value='0';slider.style.cssText='width:120px;vertical-align:middle';
 const sval=document.createElement('span');sval.className='btn';sval.style.cssText='min-width:70px;text-align:center;font-size:10px';
-sval.textContent=NH+'/'+NH+' active';
-slider.oninput=e=>{sparsity=e.target.value/100;const k=Math.max(1,Math.round(NH*(1-sparsity)));sval.textContent=k+'/'+NH+' active';draw();};
+sval.textContent=NH+'/'+NH+' activas';
+slider.oninput=e=>{sparsity=e.target.value/100;const k=Math.max(1,Math.round(NH*(1-sparsity)));sval.textContent=k+'/'+NH+' activas';draw();};
 ctrl.appendChild(slbl);ctrl.appendChild(slider);ctrl.appendChild(sval);
-const rst=document.createElement('button');rst.className='btn';rst.textContent='\u21bb Reset';
-rst.onclick=()=>{selected=0;sparsity=0;slider.value='0';sval.textContent=NH+'/'+NH+' active';draw();};ctrl.appendChild(rst);
+const rst=document.createElement('button');rst.className='btn';rst.textContent='↻ Reiniciar';
+rst.onclick=()=>{selected=0;sparsity=0;slider.value='0';sval.textContent=NH+'/'+NH+' activas';draw();};ctrl.appendChild(rst);
 draw();})();
 
 
 // ===== DENOISING AUTOENCODER =====
 (function(){const el=$('demo-dae'),[c,ctx]=createCanvas(el,750,300);
-addHint(el,'Click "Add Noise" to corrupt the signal. The autoencoder learns to reconstruct the CLEAN original from noisy input!');
+addHint(el,'Pulsa “Añadir ruido” para corromper la señal. El autoencoder aprende a reconstruir el original LIMPIO a partir de la entrada ruidosa.');
 let clean=Array(24).fill(0).map((_,i)=>Math.sin(i*.3)*.4+.5);
 let noisy=[...clean],decoded=[...clean],noiseLevel=.25,trained=false;
 function addNoise(){noisy=clean.map(v=>clamp(v+rand(-noiseLevel,noiseLevel),0,1))}
@@ -370,9 +370,9 @@ function denoise(){decoded=noisy.map((v,i)=>{let neighbors=[noisy[i-1]||v,v,nois
 return trained?clamp(neighbors.reduce((a,b)=>a+b,0)/3*.8+clean[i]*.2,0,1):v});trained=true}
 function draw(){ctx.clearRect(0,0,750,300);
 let bw=28,gap=3,stages=[
-{label:'Clean Original',vals:clean,c:'#4ecdc4',x:15},
-{label:'Noisy Input (corrupted)',vals:noisy,c:'#ff6b6b',x:265},
-{label:'Reconstructed (denoised)',vals:decoded,c:'#a78bfa',x:515}];
+{label:'Original limpio',vals:clean,c:'#4ecdc4',x:15},
+{label:'Entrada ruidosa (corrompida)',vals:noisy,c:'#ff6b6b',x:265},
+{label:'Reconstruida (denoising)',vals:decoded,c:'#a78bfa',x:515}];
 stages.forEach(s=>{ctx.fillStyle=s.c;ctx.font='600 10px Fira Code';ctx.fillText(s.label,s.x,18);
 // Bar chart
 s.vals.forEach((v,i)=>{let x=s.x+(i%12)*(bw/2+gap),y=i<12?30:145;
@@ -388,21 +388,21 @@ ctx.fillStyle='#4a475a';ctx.font='600 12px sans-serif';ctx.fillText('→ corrupt
 let mseN=clean.reduce((a,v,i)=>a+(v-noisy[i])**2,0)/clean.length;
 let mseR=clean.reduce((a,v,i)=>a+(v-decoded[i])**2,0)/clean.length;
 ctx.fillStyle='rgba(6,6,12,.88)';ctx.beginPath();ctx.roundRect(15,260,720,32,8);ctx.fill();
-ctx.fillStyle='#ff6b6b';ctx.font='500 9px Fira Code';ctx.fillText('Noise MSE: '+mseN.toFixed(4),25,278);
-ctx.fillStyle='#a78bfa';ctx.fillText('After denoise: '+mseR.toFixed(4),200,278);
-ctx.fillStyle='#ffd166';ctx.fillText(trained?'Improvement: '+(((mseN-mseR)/mseN)*100).toFixed(0)+'% error reduced!':'Press Add Noise then Denoise',400,278)}
+ctx.fillStyle='#ff6b6b';ctx.font='500 9px Fira Code';ctx.fillText('MSE del ruido: '+mseN.toFixed(4),25,278);
+ctx.fillStyle='#a78bfa';ctx.fillText('Tras denoising: '+mseR.toFixed(4),200,278);
+ctx.fillStyle='#ffd166';ctx.fillText(trained?'Mejora: '+(((mseN-mseR)/mseN)*100).toFixed(0)+'% menos error':'Pulsa “Añadir ruido” y luego “Eliminar ruido”',400,278)}
 const ctrl=addControls(el);
-ctrl.innerHTML='<label>Noise</label><input type="range" min="5" max="50" value="25" id="dnl"><span id="dnlv" class="btn" style="min-width:32px;text-align:center">0.25</span>';
+ctrl.innerHTML='<label>Ruido</label><input type="range" min="5" max="50" value="25" id="dnl"><span id="dnlv" class="btn" style="min-width:32px;text-align:center">0.25</span>';
 $('dnl').oninput=e=>{noiseLevel=e.target.value/100;$('dnlv').textContent=noiseLevel.toFixed(2)};
-const nb=document.createElement('button');nb.className='btn';nb.textContent='🔊 Add Noise';nb.onclick=()=>{addNoise();trained=false;decoded=[...noisy];draw()};
-const db=document.createElement('button');db.className='btn';db.textContent='✨ Denoise';db.onclick=()=>{denoise();draw()};
-const rst=document.createElement('button');rst.className='btn';rst.textContent='↻ Reset';
+const nb=document.createElement('button');nb.className='btn';nb.textContent='🔊 Añadir ruido';nb.onclick=()=>{addNoise();trained=false;decoded=[...noisy];draw()};
+const db=document.createElement('button');db.className='btn';db.textContent='✨ Eliminar ruido';db.onclick=()=>{denoise();draw()};
+const rst=document.createElement('button');rst.className='btn';rst.textContent='↻ Reiniciar';
 rst.onclick=()=>{noisy=[...clean];decoded=[...clean];trained=false;draw()};
 ctrl.appendChild(nb);ctrl.appendChild(db);ctrl.appendChild(rst);draw()})();
 
 // ===== GBDT =====
 (function(){const el=$('demo-gbdt'),[c,ctx]=createCanvas(el,750,340);
-addHint(el,'Each tree fits the RESIDUALS (red gaps) of the current prediction. Watch the green line approach the blue targets!');
+addHint(el,'Cada árbol ajusta los RESIDUOS (huecos rojos) de la predicción actual. Observa cómo la línea verde se acerca a los objetivos azules.');
 let data=[];for(let i=0;i<30;i++){let x=20+i*23;data.push({x,y:150+Math.sin(i*.3)*80+rand(-15,15)})}
 let trees=[],predictions=data.map(()=>150),lr4=0.3;
 function addTree(){let residuals=data.map((d,i)=>d.y-predictions[i]);
@@ -435,25 +435,25 @@ ctx.beginPath();ctx.moveTo(t.split,0);ctx.lineTo(t.split,300);ctx.stroke();ctx.s
 // Info
 let mse=data.reduce((a,d,i)=>a+(d.y-predictions[i])**2,0)/data.length;
 ctx.fillStyle='rgba(6,6,12,.88)';ctx.beginPath();ctx.roundRect(8,8,260,48,8);ctx.fill();
-ctx.fillStyle='#ffd166';ctx.font='600 11px Fira Code';ctx.fillText('Trees: '+trees.length+' | MSE: '+mse.toFixed(1),18,28);
-ctx.fillStyle='#7d7a8c';ctx.font='400 9px Fira Code';ctx.fillText('lr='+lr4+' | Blue=target Green=prediction',18,46);
+ctx.fillStyle='#ffd166';ctx.font='600 11px Fira Code';ctx.fillText('Árboles: '+trees.length+' | MSE: '+mse.toFixed(1),18,28);
+ctx.fillStyle='#7d7a8c';ctx.font='400 9px Fira Code';ctx.fillText('lr='+lr4+' | Azul=objetivo Verde=predicción',18,46);
 // Bottom
 ctx.fillStyle='rgba(6,6,12,.85)';ctx.beginPath();ctx.roundRect(15,300,720,35,8);ctx.fill();
 ctx.fillStyle='#ff6b6b';ctx.font='500 9px Fira Code';
-ctx.fillText('Each tree fits residuals (red gaps). New prediction = old + lr × tree(x). Residuals shrink each round!',25,320);
-ctx.fillStyle='#7d7a8c';ctx.fillText('Unlike Random Forest (parallel), GBDT builds trees sequentially.',25,334)}
+ctx.fillText('Cada árbol ajusta residuos (huecos rojos). Nueva predicción = antigua + lr × árbol(x). Los residuos se reducen en cada ronda.',25,320);
+ctx.fillStyle='#7d7a8c';ctx.fillText('A diferencia de Random Forest (paralelo), GBDT construye árboles de forma secuencial.',25,334)}
 const ctrl=addControls(el);
-const ab2=document.createElement('button');ab2.className='btn';ab2.textContent='🌳 +1 Tree';ab2.onclick=addTree;
-const a5=document.createElement('button');a5.className='btn';a5.textContent='🌲 +5 Trees';a5.onclick=()=>{for(let i=0;i<5;i++)addTree()};
+const ab2=document.createElement('button');ab2.className='btn';ab2.textContent='🌳 +1 árbol';ab2.onclick=addTree;
+const a5=document.createElement('button');a5.className='btn';a5.textContent='🌲 +5 árboles';a5.onclick=()=>{for(let i=0;i<5;i++)addTree()};
 let tmr=null;const auto=document.createElement('button');auto.className='btn';auto.textContent='⏩ Auto';
 auto.onclick=()=>{if(tmr){clearInterval(tmr);tmr=null;auto.classList.remove('active')}else{tmr=setInterval(()=>{addTree();if(trees.length>30){clearInterval(tmr);tmr=null;auto.classList.remove('active')}},200);auto.classList.add('active')}};
-const rst=document.createElement('button');rst.className='btn';rst.textContent='↻ Reset';
+const rst=document.createElement('button');rst.className='btn';rst.textContent='↻ Reiniciar';
 rst.onclick=()=>{trees=[];predictions=data.map(()=>150);if(tmr){clearInterval(tmr);tmr=null;auto.classList.remove('active')}draw()};
 ctrl.appendChild(ab2);ctrl.appendChild(a5);ctrl.appendChild(auto);ctrl.appendChild(rst);draw()})();
 
 // ===== NNLM — Next word prediction =====
 (function(){const el=$('demo-nnlm'),[c,ctx]=createCanvas(el,750,320);
-addHint(el,'Click a context (2 words). The neural network predicts the next word using learned word embeddings.');
+addHint(el,'Haz clic en un contexto (2 palabras). La red neuronal predice la siguiente palabra usando *word embeddings* aprendidos.');
 const vocab=['the','cat','sat','on','mat','dog','ran','in','park','a','big','small','red','blue','house'];
 const contexts=[
 {words:['the','cat'],top:[{w:'sat',p:.45},{w:'ran',p:.3},{w:'is',p:.15}]},
@@ -469,7 +469,7 @@ const embeddings={};
 vocab.forEach((w,i)=>{embeddings[w]=[Math.sin(i*1.2)*80+200,Math.cos(i*.8)*60+120,Math.sin(i*2.1)*40]});
 function draw(){ctx.clearRect(0,0,750,320);let ctx2=contexts[selected];
 // Context buttons
-ctx.fillStyle='#ffd166';ctx.font='600 10px Fira Code';ctx.fillText('Select context (2 previous words):',15,16);
+ctx.fillStyle='#ffd166';ctx.font='600 10px Fira Code';ctx.fillText('Elige contexto (2 palabras previas):',15,16);
 contexts.forEach((cc,i)=>{let x=15+(i%4)*183,y=24+Math.floor(i/4)*32;
 ctx.fillStyle=i===selected?'rgba(167,139,250,.12)':'#0c0c16';ctx.beginPath();ctx.roundRect(x,y,176,26,5);ctx.fill();
 ctx.strokeStyle=i===selected?'#a78bfa':'#1e1e32';ctx.lineWidth=i===selected?2:1;
@@ -486,13 +486,13 @@ ctx.fillStyle='#38bdf8';ctx.font='600 11px Fira Code';ctx.fillText('"'+w+'"',x+8
 let emb=embeddings[w]||[0,0,0];ctx.fillStyle='#7d7a8c';ctx.font='400 8px Fira Code';
 ctx.fillText('['+emb.map(v=>v.toFixed(0)).join(', ')+']',x+8,y+30)});
 // Hidden layer
-let hx=185;ctx.fillStyle='#a78bfa';ctx.font='600 10px Fira Code';ctx.fillText('2. Hidden',hx,ay);
+let hx=185;ctx.fillStyle='#a78bfa';ctx.font='600 10px Fira Code';ctx.fillText('2. Oculta',hx,ay);
 ctx.fillStyle='rgba(167,139,250,.05)';ctx.beginPath();ctx.roundRect(hx,ay+8,95,76,8);ctx.fill();
 ctx.strokeStyle='#a78bfa';ctx.lineWidth=1;ctx.beginPath();ctx.roundRect(hx,ay+8,95,76,8);ctx.stroke();
 ctx.fillStyle='#a78bfa';ctx.font='400 9px Fira Code';ctx.fillText('tanh(W×',hx+8,ay+35);ctx.fillText('[e₁;e₂]+b)',hx+8,ay+50);
 for(let i=0;i<4;i++){ctx.beginPath();ctx.arc(hx+75,ay+20+i*16,5,0,TAU);ctx.fillStyle='#a78bfa44';ctx.fill();ctx.strokeStyle='#a78bfa';ctx.stroke()}
 // Softmax + predictions
-let sx=320;ctx.fillStyle='#4ecdc4';ctx.font='600 10px Fira Code';ctx.fillText('3. Softmax → P(next)',sx,ay);
+let sx=320;ctx.fillStyle='#4ecdc4';ctx.font='600 10px Fira Code';ctx.fillText('3. Softmax → P(siguiente)',sx,ay);
 ctx.fillStyle='rgba(6,6,12,.88)';ctx.beginPath();ctx.roundRect(sx,ay+8,180,76,8);ctx.fill();
 ctx2.top.forEach((t,i)=>{let y=ay+18+i*22;
 ctx.fillStyle='#111120';ctx.beginPath();ctx.roundRect(sx+8,y,140,17,3);ctx.fill();
@@ -503,7 +503,7 @@ ctx.fillStyle='#e4e2df';ctx.font='600 9px Fira Code';ctx.fillText('"'+t.w+'" '+(
 ctx.fillStyle='#4a475a';ctx.font='14px sans-serif';ctx.fillText('→',152,ay+50);ctx.fillText('→',292,ay+50);
 // Embedding space
 let ex=530,ey=ay;
-ctx.fillStyle='#ffd166';ctx.font='600 10px Fira Code';ctx.fillText('Word Embedding Space:',ex,ey);
+ctx.fillStyle='#ffd166';ctx.font='600 10px Fira Code';ctx.fillText('Espacio de embeddings:',ex,ey);
 ctx.fillStyle='rgba(6,6,12,.85)';ctx.beginPath();ctx.roundRect(ex,ey+8,205,158,8);ctx.fill();
 vocab.slice(0,12).forEach((w,i)=>{let emb=embeddings[w];let px=ex+12+(emb[0]-120)*0.8,py=ey+20+(emb[1]-60)*1.1;
 let isCtx=ctx2.words.includes(w);let isPred=ctx2.top.some(t=>t.w===w);
@@ -512,12 +512,12 @@ ctx.fillStyle=isCtx?'#38bdf8':isPred?'#4ecdc4':'#4a475a';ctx.fill();
 if(isCtx||isPred){ctx.fillStyle=isCtx?'#38bdf8':'#4ecdc4';ctx.font='500 7px Fira Code';ctx.textAlign='center';ctx.fillText(w,px,py-10);ctx.textAlign='left'}});
 // Bottom
 ctx.fillStyle='rgba(6,6,12,.85)';ctx.beginPath();ctx.roundRect(15,270,720,42,8);ctx.fill();
-ctx.fillStyle='#ffd166';ctx.font='600 9px Fira Code';ctx.fillText('NNLM (Bengio 2003) — The ancestor of GPT:',25,288);
+ctx.fillStyle='#ffd166';ctx.font='600 9px Fira Code';ctx.fillText('NNLM (Bengio 2003) — el ancestro de GPT:',25,288);
 ctx.fillStyle='#7d7a8c';ctx.font='400 9px Fira Code';
-ctx.fillText('Each word → dense vector. Feed context embeddings through a neural net → predict next word probability.',25,305)}
+ctx.fillText('Cada palabra → vector denso. Pasa los embeddings del contexto por una red → predice la probabilidad de la siguiente palabra.',25,305)}
 c.onclick=e=>{let r=c.getBoundingClientRect(),mx=(e.clientX-r.left)*750/r.width,my=(e.clientY-r.top)*320/r.height;
 contexts.forEach((cc,i)=>{let x=15+(i%4)*183,y=24+Math.floor(i/4)*32;
 if(mx>=x&&mx<=x+176&&my>=y&&my<=y+26){selected=i;draw()}})};
-const ctrl=addControls(el);const rst=document.createElement('button');rst.className='btn';rst.textContent='↻ Reset';
+const ctrl=addControls(el);const rst=document.createElement('button');rst.className='btn';rst.textContent='↻ Reiniciar';
 rst.onclick=()=>{selected=0;draw()};ctrl.appendChild(rst);draw()})();
 </script></body></html>
